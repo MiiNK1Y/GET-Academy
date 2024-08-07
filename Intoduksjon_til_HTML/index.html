@@ -8,39 +8,72 @@
 </head>
 <body>
     <div id="site_container">
+        <h1>Example 1</h1>
         <div id="app_container">
             <!--Layout options goes here-->
-            <div>
-
+            <div id="layout_options">
+                <button>Vertical</button>
+                <button>Horizontal</button>
+                <button>Grid</button>
             </div>
-            <h1>Example 1</h1>
             <div id="cards">
                 <div class="card">
-                    <div class="header green">Tools</div>
-                    <div id="card_tools">
-                        <div class="card_inner">Hello from Tools</div>
+                    <div class="card__header green">Tools</div>
+                    <div id="card__tools">
+                        <div class="card__inner">
+                            The two most important tools we should use:
+                            <br>
+                            <ul>
+                                <li>
+                                    Code-editor Visual Studio Code<br>
+                                </li>
+                                    We will be using some extensions:<br>
+                                <ul>
+                                    <li>JavaScript-booster</li>
+                                    <li>es6-string-html</li>
+                                    <li>liver-server</li>
+                                    <li>live-share</li>
+                                </ul>
+                                <li>
+                                    Web-browser Google Chrome
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="header blue">HTML</div>
-                    <div id="card_html">
-                        <div class="card_inner">Hello from HTML</div>
+                    <div class="card__header blue">HTML</div>
+                    <div id="card__html">
+                        <div class="card__inner">
+                            We use HTML to define a document.
+                            <br>
+                            <ul>
+                                <li>Tags for boilerplate setup of a HTML-file</li>
+                                <li>Tags for formatting text</li>
+                                <!--FIGURE OUT HOW TO ADD <DIV> AS TEXT, NOT ELEMENT-->
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="header red">CSS</div>
-                    <div id="card_css">
-                        <div class="card_inner">Hello from CSS</div>
+                    <div class="card__header red">CSS</div>
+                    <div id="card__css">
+                        <div class="card__inner">Hello from CSS</div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="header yellow">JavaScript</div>
-                    <div id="card_javascript">
-                        <div class="card_inner">Hello from JavaScript</div>
+                    <div class="card__header yellow">JavaScript</div>
+                    <div id="card__javascript">
+                        <div class="card__inner">Hello from JavaScript</div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="header black">Head, body & legs</div>
+                    <div class="card__header black">Head, body & legs</div>
                     <div id="card_game">
                         <div id="card_game_head" class="body_part"></div>
                         <div id="card_game_body" class="body_part"></div>

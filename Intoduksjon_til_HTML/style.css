@@ -5,10 +5,14 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
+
+    font-family: 'Nunito Sans', sans-serif;
+    color: #cdd6f4;
 }
 
 #site_container {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 
@@ -18,7 +22,79 @@ body, html {
 }
 
 #app_container {
-    border: solid 2px #f38ba8;
     padding: 20px;
-    color: w;
+    border: solid 2px #f38ba8;
+    border-radius: 1em;
+    color: #cdd6f4;
+    font-size: 1.5em;
+}
+
+#layout_options {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 20px 0;
+}
+
+#layout_options button {
+    background-color: #f5e0dc;
+    border: none;
+    border-radius: 0.5em;
+    padding: 7px;
+    margin: 5px 10px 5px 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#layout_options button:hover {
+    opacity: 0.6;
+}
+
+.card {
+    margin: 10px 10px 20px 10px;
+    width: 450px;
+}
+
+.card__header {
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    color: #181825;
+    opacity: 1;
+}
+
+.card__header:hover {
+    opacity: 0.6;
+}
+
+.card__inner {
+    display: block;
+    border: solid 2px #eba0ac;
+    background-color: #313244;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 0.7em;
+}
+
+.green {
+    background-color: #a6e3a1;
+}
+
+.blue {
+    background-color: #89b4fa;
+}
+
+.red {
+    background-color: #f38ba8;
+}
+
+.yellow {
+    background-color: #f9e2af;
+}
+
+.black {
+    background-color: #11111b;
+    color: #cdd6f4;
 }
