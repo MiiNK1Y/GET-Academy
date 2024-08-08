@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Introduction</title>
 </head>
 <body>
     <div id="site_container">
         <h1>Example 1</h1>
-        <div id="app_container">
+        <div id="app-container">
             <!--Layout options goes here-->
-            <div id="layout_options">
+            <div id="layout-options">
                 <button>Vertical</button>
                 <button>Horizontal</button>
                 <button>Grid</button>
             </div>
+            <div class="splitter center"></div>
             <div id="cards">
                 <div class="card">
                     <div class="card__header green">Tools</div>
-                    <div id="card__tools">
-                        <div class="card__inner">
+                    <div id="card__tools" onclick="showCardInner()">
+                        <div class="card__inner green">
                             The two most important tools we should use:
                             <br>
                             <ul>
@@ -44,18 +46,18 @@
                 <div class="card">
                     <div class="card__header blue">HTML</div>
                     <div id="card__html">
-                        <div class="card__inner">
+                        <div class="card__inner blue">
                             We use HTML to define a document.
                             <br>
                             <ul>
                                 <li>Tags for boilerplate setup of a HTML-file</li>
                                 <li>Tags for formatting text</li>
                                 <!--FIGURE OUT HOW TO ADD <DIV> AS TEXT, NOT ELEMENT-->
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li>&lt;div&gt;</li>
+                                <li>&lt;input type="text"&gt;</li>
+                                <li>&lt;button&gt;</li>
+                                <li><a href="https://www.w3schools.com/html/default.asp">W3Schools HTML Tutorial</a></li>
+                                <li><a href="https://www.w3schools.com/tags/default.asp">W3Schools HTML Reference</a></li>
                             </ul>
                         </div>
                     </div>
@@ -63,18 +65,43 @@
                 <div class="card">
                     <div class="card__header red">CSS</div>
                     <div id="card__css">
-                        <div class="card__inner">Hello from CSS</div>
+                        <div class="card__inner red">
+                            We use CSS to <em>style</em> a document, for colors, fonts, looks and the likes.
+                            <ul>
+                                <li><code>background-color</code></li>
+                                <li><code>color</code></li>
+                                <li><code>padding</code></li>
+                                <li><code>margin</code></li>
+                                <li><code>border</code></li>
+                                <li><code>text-align</code></li>
+                                <li><code>font-size</code></li>
+                                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</a></li>
+                                <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid</a></li>
+                                <li><a href="https://www.w3schools.com/css/default.asp">W3Schools CSS Tutorial</a></li>
+                                <li><a href="https://www.w3schools.com/cssref/default.asp">W3Schools CSS Reference</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card__header yellow">JavaScript</div>
                     <div id="card__javascript">
-                        <div class="card__inner">Hello from JavaScript</div>
+                        <div class="card__inner yellow">
+                            The most important we shall learn is the programming-language JavaScript.
+                            We are going to learn basic programming by manipulating HTML and CSS code on
+                            a website with the help of JavaScript.
+                            <ul>
+                                <li>There is a W3Schools JavaScript Tutorial,
+                                    but here we recommend to follow our course on Moodle.
+                                </li>
+                                <li><a href="https://www.w3schools.com/jsref/default.asp">W3Schools JavaScript Reference</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card__header black">Head, body & legs</div>
-                    <div id="card_game">
+                    <div id="card__game">
                         <div id="card_game_head" class="body_part"></div>
                         <div id="card_game_body" class="body_part"></div>
                         <div id="card_game_legs" class="body_part"></div>

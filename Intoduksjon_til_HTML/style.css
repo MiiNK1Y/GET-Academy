@@ -1,5 +1,23 @@
 @import url(Fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
 
+:root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --surface: #313244;
+    --surface0: #45475a;
+    --text: #cdd6f4;
+
+    --flamingo: #f2cdcd;
+    --maroon: #eba0ac;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --green: #a6e3a1;
+    --blue: #89b4fa;
+    --yellow: #f9e2af;
+    --teal: #94e2d5;
+    --sapphire: #74c7ec;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -7,7 +25,12 @@ body, html {
     width: 100%;
 
     font-family: 'Nunito Sans', sans-serif;
-    color: #cdd6f4;
+    color: var(--text);
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #site_container {
@@ -16,33 +39,41 @@ body, html {
     justify-content: center;
     align-items: center;
 
-    background-color: #1e1e2e;
+    background-color: var(--base);
     height: 100%;
     width: 100%;
 }
 
-#app_container {
+#app-container {
+    background-color: var(--surface);
     padding: 20px;
-    border: solid 2px #f38ba8;
     border-radius: 1em;
-    color: #cdd6f4;
+    color: var(--text);
     font-size: 1.5em;
 }
 
-#layout_options {
+#layout-options {
     display: flex;
     justify-content: center;
-    padding: 0 0 20px 0;
+    padding: 0 0 10px 0;
 }
 
-#layout_options button {
-    background-color: #f5e0dc;
+#layout-options button {
+    background-color: var(--flamingo);
     border: none;
     border-radius: 0.5em;
     padding: 7px;
     margin: 5px 10px 5px 10px;
     cursor: pointer;
     opacity: 1;
+    font-size: 0.8em;
+}
+
+#app-container > .splitter {
+    background-color: var(--surface0);
+    width: 90%;
+    height: 2px;
+    margin-bottom: 20px;
 }
 
 #layout_options button:hover {
@@ -55,12 +86,12 @@ body, html {
 }
 
 .card__header {
-    background-color: white;
+    background-color: var(--text);
     border-radius: 5px;
     text-align: center;
     padding: 5px;
     cursor: pointer;
-    color: #181825;
+    color: var(--mantle);
     opacity: 1;
 }
 
@@ -69,32 +100,73 @@ body, html {
 }
 
 .card__inner {
-    display: block;
-    border: solid 2px #eba0ac;
-    background-color: #313244;
+    display: none;
+    border: solid 2px var(--maroon);
+    background-color: var(--surface0);
     padding: 5px;
     margin-top: 5px;
     border-radius: 5px;
     font-size: 0.7em;
 }
 
-.green {
-    background-color: #a6e3a1;
+.card__inner code {
+    font-size: 1.2em;
 }
 
-.blue {
-    background-color: #89b4fa;
+.card__header.green {
+    background-color: var(--green);
 }
 
-.red {
-    background-color: #f38ba8;
+.card__inner.green {
+    border-color: var(--green);
 }
 
-.yellow {
-    background-color: #f9e2af;
+.card__header.blue {
+    background-color: var(--blue);
 }
 
-.black {
-    background-color: #11111b;
-    color: #cdd6f4;
+.card__inner.blue {
+    border-color: var(--blue);
+}
+
+.card__header.red {
+    background-color: var(--red);
+}
+
+.card__inner.red {
+    border-color: var(--red);
+}
+
+.card__header.yellow {
+    background-color: var(--yellow);
+}
+
+.card__inner.yellow {
+    border-color: var(--yellow);
+}
+
+.card__header.black {
+    background-color: var(--base);
+    color: var(--text);
+}
+
+.card__inner.black {
+    border-color: var(--base);
+}
+
+.card__inner a {
+    color: var(--sapphire);
+    text-decoration: none;
+}
+
+.card__inner a:hover {
+    color: var(--flamingo);
+}
+
+.card__inner a:visited {
+    color: var(--flamingo)
+}
+
+.card__inner li {
+    margin-top: 2px;
 }

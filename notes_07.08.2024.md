@@ -11,4 +11,4 @@ Rebecka Kinn <- "kode laerer"
 Martin <- "kode laerer"
 
 ## Team
-
+- Group B, Team 2.
