@@ -80,9 +80,34 @@ body, html {
     opacity: 0.6;
 }
 
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 520px);
+    width: auto;
+}
+
 .card {
     margin: 10px 10px 20px 10px;
-    width: 450px;
+    max-width: 450px;
+}
+
+#card__tools,
+#card__html,
+#card__css,
+#card__javascript,
+#card__game {
+    display: none;
 }
 
 .card__header {
@@ -100,7 +125,6 @@ body, html {
 }
 
 .card__inner {
-    display: none;
     border: solid 2px var(--maroon);
     background-color: var(--surface0);
     padding: 5px;
@@ -169,4 +193,30 @@ body, html {
 
 .card__inner li {
     margin-top: 2px;
+}
+
+#card__game {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.body_part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.body_part > button {
+    margin: 5px;
+    background-color: inherit;
+    border: solid 2px var(--blue);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.body_part > button:hover {
+    border-color: var(--maroon);
 }

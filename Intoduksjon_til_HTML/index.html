@@ -4,24 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
     <title>Introduction</title>
 </head>
 <body>
     <div id="site_container">
         <h1>Example 1</h1>
         <div id="app-container">
-            <!--Layout options goes here-->
             <div id="layout-options">
-                <button>Vertical</button>
-                <button>Horizontal</button>
-                <button>Grid</button>
+                <button onclick="changeDisplay('vertical')">Vertical</button>
+                <button onclick="changeDisplay('horizontal')">Horizontal</button>
+                <button onclick="changeDisplay('grid')">Grid</button>
             </div>
             <div class="splitter center"></div>
-            <div id="cards">
+            <div id="cards" class="">
                 <div class="card">
-                    <div class="card__header green">Tools</div>
-                    <div id="card__tools" onclick="showCardInner()">
+                    <div class="card__header green" onclick="showCardInner('card__tools')">Tools</div>
+                    <div id="card__tools">
                         <div class="card__inner green">
                             The two most important tools we should use:
                             <br>
@@ -44,7 +43,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card__header blue">HTML</div>
+                    <div class="card__header blue" onclick="showCardInner('card__html')">HTML</div>
                     <div id="card__html">
                         <div class="card__inner blue">
                             We use HTML to define a document.
@@ -52,7 +51,6 @@
                             <ul>
                                 <li>Tags for boilerplate setup of a HTML-file</li>
                                 <li>Tags for formatting text</li>
-                                <!--FIGURE OUT HOW TO ADD <DIV> AS TEXT, NOT ELEMENT-->
                                 <li>&lt;div&gt;</li>
                                 <li>&lt;input type="text"&gt;</li>
                                 <li>&lt;button&gt;</li>
@@ -63,7 +61,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card__header red">CSS</div>
+                    <div class="card__header red" onclick="showCardInner('card__css')">CSS</div>
                     <div id="card__css">
                         <div class="card__inner red">
                             We use CSS to <em>style</em> a document, for colors, fonts, looks and the likes.
@@ -84,7 +82,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card__header yellow">JavaScript</div>
+                    <div class="card__header yellow" onclick="showCardInner('card__javascript')">JavaScript</div>
                     <div id="card__javascript">
                         <div class="card__inner yellow">
                             The most important we shall learn is the programming-language JavaScript.
@@ -100,11 +98,25 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card__header black">Head, body & legs</div>
+                    <div class="card__header black" onclick="showCardInner('card__game')">Head, body & legs</div>
                     <div id="card__game">
-                        <div id="card_game_head" class="body_part"></div>
-                        <div id="card_game_body" class="body_part"></div>
-                        <div id="card_game_legs" class="body_part"></div>
+                        <div class="card__inner black">
+                            <div id="card_game_head" class="body_part">
+                                <button onclick="gameChangeAsset('game__head-img', 'head', 'left')">&#8701;</button>
+                                <img src="img/head1.png" id="game__head-img" />
+                                <button onclick="gameChangeAsset('game__head-img', 'head', 'right')">&#8702;</button>
+                            </div>
+                            <div id="card_game_body" class="body_part">
+                                <button onclick="gameChangeAsset('game__body-img', 'body', 'left')">&#8701;</button>
+                                <img src="img/body1.png" id="game__body-img" />
+                                <button onclick="gameChangeAsset('game__body-img', 'body', 'right')">&#8702;</button>
+                            </div>
+                            <div id="card_game_legs" class="body_part">
+                                <button onclick="gameChangeAsset('game__legs-img', 'legs', 'left')">&#8701;</button>
+                                <img src="img/legs1.png" id="game__legs-img" />
+                                <button onclick="gameChangeAsset('game__legs-img', 'legs', 'right')">&#8702;</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
