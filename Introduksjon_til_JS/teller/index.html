@@ -1,0 +1,62 @@
+<!--Task - make a visual counter-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>counter</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+
+            background-color: #1e1e2e;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #f2cdcd;
+            width: 2em;
+            height: 2em;
+            font-size: 3em;
+            border: none;
+            border-radius: 0.5em;
+        }
+
+        button:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        #application {
+            background-color: #313244;
+            padding: 10px;
+            border-radius: 2em;
+            text-align: center;
+        }
+        
+        #count {
+            background-color: #45475a;
+            color: #cdd6f4;
+            margin: 20px;
+            padding: 10px;
+            font-size: 4em;
+            border-radius: 0.3em;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="application">
+        <button type="button" onclick="plusOne()">+</button>
+        <div id="count">0</div>
+        <button type="button" onclick="minusOne()">-</button>
+    </div>
+</body>
+</html>

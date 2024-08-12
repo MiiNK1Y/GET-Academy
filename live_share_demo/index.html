@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potion Manager</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        #items {
+            display: flex;
+            flex-direction: row;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="max-potions"></div>
+        <div id="items">
+            <div class="item">
+                <button type="button">+</button>
+                <div id="counter__health" class="number">0</div>
+                <button type="button">-</button>
+            </div>
+            <div class="item">
+                <button type="button">+</button>
+                <div id="counter__mana" class="number">0</div>
+                <button type="button">-</button>
+            </div>
+            <div class="item">
+                <button type="button">+</button>
+                <div id="counter__physick" class="number">0</div>
+                <button type="button">-</button>
+            </div>
+            <div class="item">
+                <button type="button">+</button>
+                <div id="counter__markia" class="number">0</div>
+                <button type="button">-</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

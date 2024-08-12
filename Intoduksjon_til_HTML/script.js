@@ -135,5 +135,5 @@ function gameChangeAsset (attr, part, direction){
                 document.getElementById(attr).setAttribute("src", legs3);
                 break
         }
-    }
-};
+    };
+}
