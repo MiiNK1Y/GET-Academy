@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script.js"></script>
     <title>About me</title>
+    <script>
+        function changeBackground() {
+            document.body.style.background = "#2a3a38";
+        }
+    </script>
     <style>
         html {
             margin: 0;
@@ -23,6 +28,10 @@
             color: #cdd6f4;
         }
 
+        img {
+            max-width: 300px;
+        }
+
     </style>
 </head>
 <body>
@@ -37,6 +46,9 @@
             </ul>
             In hopes of learning collaboration and expanding<br>
             my knowledge about web-development.</p>
+        <img src="341cc50deab163f54a9c747d626c84f0.png" />
+        <br>
+        <button onclick="changeBackground()">change background</button>
     </div>
 </body>
 </html>

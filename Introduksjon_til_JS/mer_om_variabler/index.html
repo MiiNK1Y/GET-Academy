@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var selected_color;
+        var color_thing;
+
+        function clearSelected() {
+            document.getElementById(color_thing).classList.remove("selected");
+            color_thing = null;
+            selected_color = null;
+        }
+
+        function getColor(color) {
+            selected_color = color;
+        }
+
+        function colorThing(thing) {
+            color_thing = thing;
+            document.getElementById(thing).classList.add("selected");
+        }
+
+        function setColor() {
+            if (color_thing == null) {
+                document.body.style.backgroundColor = selected_color;
+            } else {
+                document.getElementById(color_thing).style.backgroundColor = selected_color;
+            };
+            clearSelected();
+        }
+
+    </script>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #1e1e2e;
+        }
+
+        #colors {
+            display: flex;
+            flex-direction: row;
+            border: 5px solid #cba6f7;
+            border-radius: 1em;
+            padding: 10px;
+        }
+
+        #colors > div {
+            width: 50px;
+            height: 20px;
+            margin: 3px;
+            border-radius: 5px;
+            border: 2px solid;
+        }
+
+        #colors > div:hover {
+            border: 2px solid #cba6f7;
+        }
+
+        #colors-to-set {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .selected {
+            border: 2px solid #f38ba8;
+        }
+
+        #show-color_1,
+        #show-color_2 {
+            width: 100px;
+            height: 50px;
+            background-color: #7f849c;
+            margin: 3px;
+            border-radius: 0.5em;
+        }
+
+        .show_color:hover {
+            border: 2px solid #cba6f7;
+        }
+
+        button {
+            margin: 10px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #cba6f7;
+        }
+
+        button:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+            
+    </style>
+</head>
+<body>
+    <div id="colors">
+        <div style="background-color: #11111b;" onclick="getColor('#11111b')"></div>
+        <div style="background-color: #181825;" onclick="getColor('#181825')"></div>
+        <div style="background-color: #45475a;" onclick="getColor('#45475a')"></div>
+    </div>
+    <button onclick="setColor()">change background-color</button>
+    <div id="colors-to-set">
+        <div id="show-color_1" class="" onclick="colorThing('show-color_1')"></div>
+        <div id="show-color_2" class="" onclick="colorThing('show-color_2')"></div>
+    </div>
+</body>
+</html>

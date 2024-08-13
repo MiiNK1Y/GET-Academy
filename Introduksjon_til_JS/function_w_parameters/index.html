@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style change</title>
+    <script>
+        function change(str, color, size) {
+            document.getElementById("txt").innerHTML = str;
+            document.getElementById("app").style.borderColor = color;
+            document.getElementById("app").style.width = size;
+        }
+    </script>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            background-color: #1e1e2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            border: none;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 1em;
+        }
+
+        p {
+            color: #cdd6f4;
+            text-align: center;
+        }
+
+        #app {
+            border: 5px solid #cba6f7;
+            border-radius: 1em;
+        }
+        
+        .peach {
+            background-color: #fab387;
+        }
+
+        .lavender {
+            background-color: #b4befe;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button class="peach" onclick="change('this string is now changed', '#94e2d5', '200px')">peach</button>
+        <button class="lavender" onclick="change('this is now a new string', '#f5c2e7', '500px')">lavender</button>
+        <p id="txt">This string will change<br>on the press of a button</p>
+    </div>
+</body>
+</html>
