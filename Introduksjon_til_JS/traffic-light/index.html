@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Traffic-light</title>
+</head>
+<body>
+    <div class="light_body">
+        <div id="red-light" class="light light_red"></div>
+        <div id="yellow-light" class="light light_yellow"></div>
+        <div id="green-light" class="light light_green"></div>
+    </div>
+    <div class="button-row">
+        <button class="button_red" onclick="toggle('red')">R</button>
+        <button class="button_yellow" onclick="sequence()">Y</button>
+        <button class="button_green" onclick="toggle('green')">G</button>
+    </div>
+</body>
+</html>
