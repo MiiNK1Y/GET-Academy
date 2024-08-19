@@ -38,3 +38,25 @@ function toggle(light) {
             break;
     }
 }
+
+function rygSequence() {
+    toggle('yellow');
+    setTimeout(() => {toggle('red')}, 2000);
+    setTimeout(() => {toggle('green')}, 3000);
+    setTimeout(() => {toggle('yellow')}, 3000);
+}
+
+function gyrSequence() {
+    toggle('yellow');
+    setTimeout(() => {toggle('green')}, 2000);
+    setTimeout(() => {toggle('red')}, 3000);
+    setTimeout(() => {toggle('yellow')}, 3000);
+}
+
+function sequence() {
+    if (lightRed && !lightYellow && !lightGreen) {
+        rygSequence();
+    } else if (lightGreen && !lightYellow && !lightRed) {
+        gyrSequence();
+    }
+}

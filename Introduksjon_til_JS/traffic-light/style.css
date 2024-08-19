@@ -68,6 +68,10 @@ button {
     opacity: 1;
 }
 
+.control-panel {
+    display: flex;
+}
+
 .button-row {
     display: grid;
     background-color: #585b70;

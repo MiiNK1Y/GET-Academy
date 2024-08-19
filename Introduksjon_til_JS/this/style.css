@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "quicksand";
+    src: url("Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #1e1e2e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-field {
+    min-width: 50px;
+    font-family: "quicksand";
+    font-size: 2em;
+
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 3px solid #9399b2;
+    border-radius: 2em;
+    color: #cdd6f4;
+}
+
+#keyboard {
+    padding: 20px;
+    border: 3px solid #9399b2;
+    border-radius: 2em;
+}
+
+.row {
+    display: flex;
+}
+
+#row-2 {
+    margin-left: 25px;
+}
+
+#row-3 {
+    margin-left: 50px;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "quicksand";
+    font-size: 3em;
+    color: #cdd6f4;
+
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    margin: 3px;
+    border: 3px solid #9399b2;
+    border-radius: 15px;
+
+    user-select: none;
+    box-shadow: 0 0 20px 0 #cdd6f450;
+}
+
+.key:hover {
+    color: #a6e3a1;
+    cursor: pointer;
+    border-color: #cba6f7;
+    box-shadow: 0 0 20px 0 #94e2d5;
+    font-weight: 900;
+}
