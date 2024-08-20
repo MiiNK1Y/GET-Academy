@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: #1e1e2e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+}
+
+#bulb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cac1aa;
+}
+
+.bulb__on {
+    box-shadow: 0 0 50px 0 rgb(255, 196, 0);
+}
+
+.text {
+    display: flex;
+    margin: 50px;
+    font-size: 2em;
+}
+
+.switch {
+    background-color: #6c7086;
+    padding: 20px;
+    border-radius: 1em;
+}
+
+#switch__slide {
+    position: relative;
+    background-color: #f38ba8;
+    height: 80px;
+    width: 50px;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+#switch__peg {
+    position: absolute;
+    background-color: #1e1e2e;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 0;
+}
+
+.switch__peg__on {
+    top: 0;
+}

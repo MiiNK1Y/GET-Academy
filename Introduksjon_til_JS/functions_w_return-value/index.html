@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>JS with return</title>
+    <style>
+        @font-face {
+            font-family: "quicksand";
+            src: url("Quicksand/Quicksand-VariableFont_wght.ttf");
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+
+            background-color: #1e1e2e;
+            font-family: "quicksand";
+        }
+
+        button {
+            background-color: transparent;
+            font-size: 2em;
+            padding: 10px;
+            border: 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h1,
+        button {
+            color: #cdd6f4;
+        }
+
+        #cards,
+        .card {
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #45475a;
+            padding: 20px;
+            border-radius: 1em;
+            margin: 5px;
+            font-size: 1.2em;
+        }
+
+        .buttons {
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Add card</h1>
+    <div class="buttons">
+        <button onclick="makeCard('#a6e3a1', 'I\'m Green', '#cdd6f4')">Green</button>
+        <button onclick="makeCard('#fab387', 'I\'m Orange', '#1e1e2e')">Orange</button>
+        <button onclick="makeCard('#f38ba8', 'I\'m Red', '#f5e0dc')">Red</button>
+    </div>
+    <div id="cards"></div>
+</body>
+</html>
