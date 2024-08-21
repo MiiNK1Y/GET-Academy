@@ -1,13 +1,13 @@
 const potion_max = 12;
 
-let potion_healt = document.getElementById("counter__healt").innerHTML;
+let potion_health = document.getElementById("counter__health").innerHTML;
 let potion_mana = document.getElementById("counter__mana").innerHTML;
 let potion_physick = document.getElementById("counter__physick").innerHTML;
 let potion_marika = document.getElementById("counter__marika").innerHTML;
 
 function checkMax() {
     if (
-        potion_healt + potion_mana + potion_physick + potion_marika >= 12
+        potion_health + potion_mana + potion_physick + potion_marika >= 12
     ) {
         alert("you don't have that many potions");
         return false
@@ -35,7 +35,7 @@ function addOrSubPotionAmount(potionID, addOrSub) {
 
     if (addOrSub == '+') {
         setPotionAmount(potionID, potion++);
-    } else (addOrSub == '-') {
+    } else if (addOrSub == '-') {
         setPotionAmount(potionID, potion--);
     }
 }
