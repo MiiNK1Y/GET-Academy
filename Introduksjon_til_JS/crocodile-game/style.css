@@ -85,12 +85,18 @@ button:hover {
 }
 
 #points__count {
-    transition: font-size 0.4s;
+    transition: font-size 0.4s,
+                font-weight 0.4s,
+                color 0.4s;
 }
 
 .points__correct,
 .points__wrong {
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: 700;
+    transition: font-size 0.4s,
+                font-weight 0.4s,
+                color 0.4s;
 }
 
 .points__correct {
