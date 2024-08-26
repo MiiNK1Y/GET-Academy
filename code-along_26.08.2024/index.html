@@ -1,0 +1,44 @@
+<!--
+
+Du skal vise frem enten Hund, Katt eller Esel i en div når 
+du trykker på en knapp "Random animal". 
+Lag et inputfelt og en knapp til der du kan legge 
+til flere dyr som kan dukke opp i diven når du trykker på knappen 
+"Random animal". Lag også en knapp "Show all animals" som viser frem 
+alle dyrene i en liste og endrer knappeteksten til "Hide all animals" når du 
+trykker på den en gang til for å skjule dyrelisten fra viewet.
+
+Ekstra: 
+Hvis dyret er en hund, skal teksten få en annen farge. Bruk en if-setning.
+Trekk ut random-funksjonen til å bruke return
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Animals</title>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="show-animals"></div>
+    <button id="random-animal" onclick="showAnimal()">random animal</button>
+    <input type="text"></input>
+    <button id="add-animal" onclick="addAnimal()">add animal</button>
+</body>
+</html>
