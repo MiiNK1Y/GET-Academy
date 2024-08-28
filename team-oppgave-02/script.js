@@ -61,6 +61,7 @@ function giveCoffee() {
 function coffeeCounting(){
     coffeeCounter++;
     document.getElementById("coffeeCounter").innerHTML =`Coffee ${coffeeCounter}`;
+    coffeeMessage();
 }
 
 function giveCatnip() {
@@ -70,6 +71,7 @@ function giveCatnip() {
 function catnipCounting(){
     catnipCounter++;
     document.getElementById("catnipCounter").innerHTML =`Catnip ${catnipCounter}`;
+    catnipMessage();
 }
 
 // chat-bubble__needs-text
