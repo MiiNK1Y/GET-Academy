@@ -1,13 +1,63 @@
+:root {
+    --base: #1e1e2e;
+    --text: #cdd6f4;
+    --red: #f38ba8;
+    --green: #a6e3a1;
+    --lavender: #b4befe;
+    --mauve: #cba6f7;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+}
 
+body,
+#app {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: #303446;
+    background-color: var(--base);
+    font-size: 1.3em;
+    color: var(--text);
+}
+
+button {
+    background-color: var(--mauve);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8em;
+    color: black;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button > #text {
+    padding: 0;
+    margin: 0;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+#story,
+.button-container {
+    border-radius: 20px;
+}
+
+#story {
+    border: 3px solid var(--lavender);
+    padding: 10px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
 }
