@@ -59,7 +59,7 @@ function giveCuddle() {
 
 function cuddleCounting() {
     cuddleCounter++;
-    document.getElementById("cuddleCounter").innerHTML = `Cuddle ${cuddleCounter}`;
+    document.getElementById("cuddleCounter").innerHTML = `Cuddle: ${cuddleCounter}`;
     cuddleMessage();
 }
 
@@ -69,7 +69,7 @@ function giveCoffee() {
 
 function coffeeCounting() {
     coffeeCounter++;
-    document.getElementById("coffeeCounter").innerHTML = `Coffee ${coffeeCounter}`;
+    document.getElementById("coffeeCounter").innerHTML = `Coffee: ${coffeeCounter}`;
     coffeeMessage();
 }
 
@@ -79,7 +79,7 @@ function giveCatnip() {
 
 function catnipCounting() {
     catnipCounter++;
-    document.getElementById("catnipCounter").innerHTML = `Catnip ${catnipCounter}`;
+    document.getElementById("catnipCounter").innerHTML = `Catnip: ${catnipCounter}`;
     catnipMessage();
 }
 
@@ -187,8 +187,8 @@ function engGameSeq() {
     document.getElementById("buttons").style.display = "none";
 
     // change the avar image
-    const smilePath = "/avatar.png";
-    const angyPath = "/avatar_angy.png";
+    const smilePath = "avatar.png";
+    const angyPath = "avatar_angy.png";
 
     // 'counter' is global
     if (Number(counter == 100)) {
