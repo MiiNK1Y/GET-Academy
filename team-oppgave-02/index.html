@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css"/>
-    <title>Tamagotchi</title>
-</head>
-<body>
-    <!-- <button onclick="avatarImage()">img test</button> -->
-    <button id="start" onclick="startSeq()">spawn Catppuccin</button>
-    <div id="app">
-        <img id="avatar" src="avatar.png">
-        <div id="app__bubble-and-buttons">
-            <div id="chat-bubble">
-                <div id="chat-bubble__i-need-text">I need:</div>
-                <div id="chat-bubble__needs-text">
-                    Crack cocaine. NOW >:(
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Tamagotchi</title>
+    </head>
+    <body>
+        <!-- <button onclick="avatarImage()">img test</button> -->
+        <button id="start" onclick="startSeq()">spawn Catppuccin</button>
+        <div id="app">
+            <img id="avatar" src="avatar.png" />
+            <div id="app__bubble-and-buttons">
+                <div id="chat-bubble">
+                    <div id="chat-bubble__needs-text"></div>
+                    <div id="chat-bubble-tail"></div>
                 </div>
-                <div id="chat-bubble-tail"></div>
+                <div id="button-container">
+                    <div id="buttons">
+                        <div id="feedCounter" onclick="giveFood()">
+                            Feed:
+                            <span id="counter">0</span>
+                        </div>
+                        <div id="peeCounter" onclick="givePee()">
+                            Pee:
+                            <span id="counter">0</span>
+                        </div>
+                        <div id="entertainCounter" onclick="giveEntertain()">
+                            Entertain:
+                            <span id="counter">0</span>
+                        </div>
+                        <div id="cuddleCounter" onclick="giveCuddle()">
+                            Cuddle:
+                            <span id="counter">0</span>
+                        </div>
+                        <div id="coffeeCounter" onclick="giveCoffee()">
+                            Coffee:
+                            <span id="counter">0</span>
+                        </div>
+                        <div id="catnipCounter" onclick="giveCatnip()">
+                            Catnip:
+                            <span id="counter">0</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="buttons">
-                <div id="feedCounter" onclick="giveFood()">Feed:
-                    <span id="counter">0</span>
-                </div>
-                <div id="peeCounter" onclick="givePee()">Pee:
-                    <span id="counter">0</span>
-                </div>   
-                <div id="entertainCounter" onclick="giveEntertain()">Entertain: 
-                    <span id="counter">0</span>
-                </div>
-                <div id="cuddleCounter" onclick="giveCuddle()">Cuddle:
-                    <span id="counter">0</span>
-                </div>
-                <div id="coffeeCounter" onclick="giveCoffee()">Give coffee:
-                    <span id="counter">0</span>
-                </div>
-                <div id="catnipCounter" onclick="giveCatnip()">Give catnip:
-                    <span id="counter">0</span>
-                </div> 
-            </div>
-        </div>   
-    </div>
+        </div>
 
-<!--<p>
+        <!--<p>
 "I think I need the toilet"
 "Okey i really need to pee"
 "Seriously I'm gonna piss myself"
@@ -71,4 +76,5 @@
 "Dude give me my feckin coffee or I'll barf on your floor"
 
 </p> -->
-</body>  
+    </body>
+</html>
