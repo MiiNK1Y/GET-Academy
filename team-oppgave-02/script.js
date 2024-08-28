@@ -17,6 +17,7 @@ function startCounter() {
 function feedCounting() {
     feedCounter++;
     document.getElementById("feedCounter").innerHTML = `Feed: ${feedCounter}` ;
+    feedMessage();
 }
 function giveFood() 
 {
@@ -25,9 +26,9 @@ function giveFood()
 
 
 function peeCounting() { 
-   
     peeCounter++;
     document.getElementById("peeCounter").innerHTML = `Pee: ${peeCounter}`;
+    peeMessage();
 }
 function givePee() {
     peeCounter = 0;
@@ -40,6 +41,7 @@ function giveEntertain() {
 function entertainCounting(){
     entertainCounter++;
     document.getElementById("entertainCounter").innerHTML =`Entertain: ${entertainCounter}`;
+    entertainMessage();
 }
 
 function giveCuddle() {
@@ -49,6 +51,7 @@ function giveCuddle() {
 function cuddleCounting(){
     cuddleCounter++;
     document.getElementById("cuddleCounter").innerHTML = `Cuddle ${cuddleCounter}`;
+    cuddleMessage();
 }
 
 function giveCoffee() {
@@ -66,99 +69,99 @@ function giveCatnip() {
 }
 function catnipCounting(){
     catnipCounter++;
-    document.getElementById("catnipCounter").innerHTML =`catnip ${cuddleCounter}`;
+    document.getElementById("catnipCounter").innerHTML =`Catnip ${catnipCounter}`;
 }
 
 // chat-bubble__needs-text
 function feedMessage() {
-    if(feedCounter= 10){
+    if(feedCounter== 10){
         document.getElementById("chat-bubble__needs-text").innerHTML = `I'm hungry:)`
     }
-    else if(feedCounter= 30){
+    else if(feedCounter== 30){
         document.getElementById("chat-bubble__needs-text").innerHTML = `I need food now.`
     }
-    else if(feedCounter= 80){
+    else if(feedCounter== 80){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Ok dude, I need something to eat RN or I'm gonna die!!!`
     }
-    else if(feedCounter= 100){
+    else if(feedCounter== 100){
         counter = 100;
         engGameSeq();
     }
 }
 function entertainMessage() {
-    if(entertainCounter= 10){
+    if(entertainCounter== 10){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Can we plz play?`
     }
-    else if(entertainCounter= 30){
+    else if(entertainCounter== 30){
         document.getElementById("chat-bubble__needs-text").innerHTML = `I really wanna play with you`
     }
-    else if(entertainCounter= 80){
+    else if(entertainCounter== 80){
         document.getElementById("chat-bubble__needs-text").innerHTML = `If we don't play right this instance, I'm gonna burn down the house.`
     }
-    else if(entertainCounter= 100){
+    else if(entertainCounter== 100){
         counter = 100;
         engGameSeq();
     }
 }
 function coffeeMessage() {
-    if(coffeeCounter= 10){
+    if(coffeeCounter== 10){
         document.getElementById("chat-bubble__needs-text").innerHTML = `I feel a bit tired, might I have some coffee?`
     }
-    else if(coffeeCounter= 30){
+    else if(coffeeCounter== 30){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Yo my head really hurts, I. NEED. COFFEE`
     }
-    else if(coffeeCounter= 80){
+    else if(coffeeCounter== 80){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Dude give me my feckin coffee or I'll barf on your floor`
     }
-    else if(coffeeCounter= 100){
+    else if(coffeeCounter== 100){
         counter = 100;
         engGameSeq();
     }
 }
 
 function peeMessage(){
-    if(peeCounter = 10){
+    if(peeCounter == 10){
         document.getElementById("chat-bubble__needs-text").innerHTML = `I think I need the toilet`
     }
-    else if(peeCounter = 30){
+    else if(peeCounter == 30){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Okey i really need to pee`
     }
-    else if(peeCounter = 80){
+    else if(peeCounter == 80){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Seriously I'm gonna piss myself`
     }
-    else if(peeCounter = 100){
+    else if(peeCounter == 100){
        counter = 100;
        engGameSeq();
     }
 }
 
 function cuddleMessage(){
-    if(cuddleCounter = 10){
+    if(cuddleCounter == 10){
         document.getElementById("chat-bubble__needs-text").innerHTML = `I'm feeling kinda lonely, could I get a hug?`
     }
-    else if(cuddleCounter = 30){
+    else if(cuddleCounter == 30){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Okey I'm feeling neglected`
     }
-    else if(cuddleCounter = 80){
+    else if(cuddleCounter == 80){
         document.getElementById("chat-bubble__needs-text").innerHTML = `HOOMAN! ARE YOU AWARE OF MY EXISTENCE? GIVE ME A DAMN HUG!`
     }
-    else if(cuddleCounter = 100){
+    else if(cuddleCounter == 100){
        counter = 100;
        engGameSeq();
     }
 }
 
 function catnipMessage(){
-    if(catnipCounter = 10){
+    if(catnipCounter == 10){
         document.getElementById("chat-bubble__needs-text").innerHTML = `Hm, you know what would be nice now? I lil somethin somethin`
     }
-    else if(catnipCounter = 30){
+    else if(catnipCounter == 30){
         document.getElementById("chat-bubble__needs-text").innerHTML = `I'm talking about that good cush. Catnip. Asap.`
     }
-    else if(catnipCounter = 80){
+    else if(catnipCounter == 80){
         document.getElementById("chat-bubble__needs-text").innerHTML = `You're the reason I have a crippling addiction, give me my feckin catnip or I'm gonna take a shit on your pillow!!`
     }
-    else if(catnipCounter = 100){
+    else if(catnipCounter == 100){
        counter = 100;
        engGameSeq();
     }
