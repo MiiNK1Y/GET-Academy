@@ -1,0 +1,11 @@
+oninput="" - runs a function on every single keypress / char given.
+
+example: 
+let aName;
+<input type="text" oninput="aName.this.value" />
+
+onchange="" - runs a function when the state changes (ex: checkboxes).
+
+<input type="radio" /> - is kind of a checkbox, but circle...
+
+my_name = aName ?? "hello" - sets whats inside quotemark if the value inside aName is 'null' or 'undefined'.
