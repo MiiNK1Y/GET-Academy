@@ -45,7 +45,6 @@ function checkString() {
     } else {
         // reset the view if there is no text in the input.
         counterDiv = "";
-        submitButton = "";
     }
     updateView();
 }
