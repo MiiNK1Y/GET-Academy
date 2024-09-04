@@ -1,4 +1,4 @@
-// model
+// view -----------------------------------------------
 const app = document.getElementById("app");
 
 const vocals = [
@@ -31,7 +31,6 @@ function updateView() {
     app.innerHTML = /*HTML*/ `
         ${counterDiv}
         ${inputField}
-        ${submitButton}
     `;
     focusInputField();
 }
@@ -44,7 +43,6 @@ function checkString() {
         isVocal();
         showCounter();
         setInputField();
-        showButton();
     } else {
         // reset the view if there is no text in the input.
         counterDiv = "";
@@ -60,16 +58,6 @@ function isVocal() {
     }
 }
 
-/* 
-* TODO: ADD SUBMIT BUTTON FUNCTIONALITY:
-* pressing the button saves the "x of z are vocals" stats and pushes it up,
-* making room for a new string to get stats from. 
-*
-* When the stats are submitted, the background changes color, and the string
-* the stats are made from are visible as small text above the stats in the
-* same box.
-*/ 
-
 // functions that modifies the model.
 function showCounter() {
     counterDiv = /*HTML*/ `
@@ -80,10 +68,6 @@ function showCounter() {
             <div>&nbsp;are vocals!</div>
         </div>
     `;
-}
-
-function showButton() {
-    submitButton = text ? "<button>submit</button>" : '';
 }
 
 function setInputField() {
