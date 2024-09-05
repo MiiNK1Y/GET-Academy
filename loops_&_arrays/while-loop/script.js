@@ -5,7 +5,7 @@ let pretext = "Click the box to generate numbers!"
 let randomNum01 = "X";
 let randomNum02 = "Z";
 
-let numbers = /*HTML*/ `${randomNum01} &#65372; ${randomNum01}`;
+let numbers = /*HTML*/ `${randomNum01} | ${randomNum01}`;
 
 let guessesDiv = "";
 let guesses = 1;
@@ -34,7 +34,7 @@ function setNum() {
     }
 
     pretext = "Found similar numbers!";
-    numbers = /*HTML*/ `${randomNum01} &#65372; ${randomNum01}`;
+    numbers = /*HTML*/ `${randomNum01} | ${randomNum01}`;
     guessesDiv = /*HTML*/ `<div id="guessed">(guessed ${guesses} times!)</div>`
 
     updateView();
