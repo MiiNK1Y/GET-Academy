@@ -33,6 +33,7 @@ function setNum() {
         guesses++;
     }
 
+    // update the model.
     pretext = "Found similar numbers!";
     numbers = /*HTML*/ `${randomNum01} | ${randomNum01}`;
     guessesDiv = /*HTML*/ `<div id="guessed">(guessed ${guesses} times!)</div>`
