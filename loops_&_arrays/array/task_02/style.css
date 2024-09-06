@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #1e1e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    padding: 8px;
+    border: 3px solid transparent;
+}
+
+input,
+button {
+    font-size: 1.1em;
+    text-align: center;
+    outline: none;
+    border-radius: 8px;
+    font-family: system-ui;
+    margin: 10px;
+}
+
+input:focus {
+    border: 3px solid #cba6f7;
+    box-shadow: inset 0 0 10px 0 black;
+}
+
+button {
+    background-color: #cba6f7;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 200ms;
+    border: none;
+}
+
+.button__text {
+    font-size: 1.1em;
+    user-select: none;
+    transition: font-size 100ms, text-shadow 200ms;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #b4befe;
+    transition: box-shadow 200ms;
+}
+
+button:hover .button__text {
+    font-size: 1.5em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: font-size 200ms, text-shadow 200ms;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+}
+
+#cart {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #313244;
+    border-radius: 8px;
+    padding: 7px;
+    font-family: system-ui;
+}
+
+.cart__item {
+    font-family: system-ui;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
