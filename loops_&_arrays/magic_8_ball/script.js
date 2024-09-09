@@ -4,7 +4,7 @@ const app = document.getElementById("app");
 // always visible
 let eightBallSlider = /*HTML*/ `
     <div id="eight_ball" onclick="showTextButton()">
-        <div id="eight_ball__slider" class="eight_ball__slider_back">
+        <div id="eight_ball__slider" class="eight_ball__slider_front">
             <div id="eight_ball__front"><strong>8</strong></div>
             <div id="eight_ball__back">
                 <img src="triangle.png" id="triangle" class="triangle_hide" />
