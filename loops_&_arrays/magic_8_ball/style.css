@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #24273a;
+}
+
+body,
+#eight_ball,
+#eight_ball__front,
+#eight_ball__back {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#eight_ball {
+    width: 400px;
+    height: 400px;
+    background-color: #11111b;
+    overflow: hidden;
+}
+
+#eight_ball__front,
+#eight_ball__back {
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 30px 10px black;
+}
+
+#eight_ball__front {
+    background-color: #cdd6f4;
+    font-size: 8em;
+    user-select: none;
+}
+
+#eight_ball__back {
+    background-color: black;
+    border: 4px solid #585b70; 
+    outline: 2px solid white;
+}
