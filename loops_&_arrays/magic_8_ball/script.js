@@ -1,20 +1,16 @@
 // model
 const app = document.getElementById("app");
 
-let states = ["front", "back"];
-let curState = states[0];
-let EightBall;
-
 // always visible
-let EightBallFront = /*HTML*/ `
-    <div id="eight_ball" onclick="eightBallClick()">
-        <div id="eight_ball__front"><strong>8</strong></div>
-    </div>
-    `;
-
-let EightBallBack = /*HTML*/ `
-    <div id="eight_ball" onclick="eightBallClick()">
-        <div id="eight_ball__back"></div>
+let eightBallSlider = /*HTML*/ `
+    <div id="eight_ball" onclick="showTextButton()">
+        <div id="eight_ball__slider" class="eight_ball__slider_back">
+            <div id="eight_ball__front"><strong>8</strong></div>
+            <div id="eight_ball__back">
+                <img src="triangle.png" id="triangle" class="triangle_hide" />
+                <div id="text">Hail Satan</div>
+            </div>
+        </div>
     </div>
     `;
 
@@ -23,25 +19,30 @@ let EightBallBack = /*HTML*/ `
 updateView();
 function updateView() {
     app.innerHTML = /*HTML*/ `
-        ${show8Ball()}
+        ${eightBallSlider}
     `;
 }
 
 
 // controller
-function show8Ball() {
-    if (curState == "front") {
-        return EightBallFront;
-    } else if (curState == "back") {
-        return EightBallBack;
+function showTextButton() {
+    let curBallClass = document.getElementById("eight_ball__slider").classList;
+    let curTriangleClass = document.getElementById("triangle").classList;
+    if (
+        curBallClass.contains("eight_ball__slider_front") ||
+        curTriangleClass.contains("triangle_hide")
+    ) {
+        curBallClass.remove("eight_ball__slider_front");
+        curBallClass.add("eight_ball__slider_back");
+        curTriangleClass.remove("triangle_hide");
+        curTriangleClass.add("triangle_show");
+    } else if (
+        curBallClass.contains("eight_ball__slider_back") ||
+        curTriangleClass.contains("triangle_show")
+    ) {
+        curBallClass.remove("eight_ball__slider_back");
+        curBallClass.add("eight_ball__slider_front");
+        curTriangleClass.remove("triangle_show");
+        curTriangleClass.add("triangle_hide");
     };
-}
-
-function eightBallClick() {
-    if (curState == "front") {
-        curState = "back";
-    } else if (curState == "back") {
-        curState = "front";
-    };
-    updateView();
 }

@@ -7,7 +7,6 @@ html, body {
 }
 
 body,
-#eight_ball,
 #eight_ball__front,
 #eight_ball__back {
     border-radius: 50%;
@@ -17,16 +16,42 @@ body,
 }
 
 #eight_ball {
+    position: relative;
+    border-radius: 50%;
     width: 400px;
     height: 400px;
     background-color: #11111b;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: 50px 50px 150px 10px white,
+                inset 12px 10px 30px 1px white;
+    transition: box-shadow 0.5s;
+    cursor: pointer;
+}
+
+#eight_ball:hover {
+    box-shadow: 50px 50px 150px 10px #cba6f7,
+                inset 12px 10px 30px 1px #cba6f7;
+    transition: box-shadow 0.5s;
+}
+
+#eight_ball__slider {
+    display: grid;
+    grid-template-rows: 200px minmax(auto, 200px);
+    gap: 150px;
 }
 
 #eight_ball__front,
 #eight_ball__back {
-    width: 50%;
-    height: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 30px 10px black;
+}
+
+#eight_ball__back {
+    width: 200px;
+    height: auto;
     box-shadow: 0 0 30px 10px black;
 }
 
@@ -40,4 +65,64 @@ body,
     background-color: black;
     border: 4px solid #585b70; 
     outline: 2px solid white;
+    overflow: hidden;
+    position: relative;
+}
+
+.eight_ball__slider_front {
+    margin-top: 70px;
+    transition: margin-top 2s;
+}
+
+.eight_ball__slider_back {
+    margin-top: -220px;
+    transition: margin-top 2s;
+}
+
+#triangle {
+    height: 140px;
+    margin-top: 40px;
+    user-select: none;
+}
+
+@keyframes fadeOut {
+    0% 
+    {
+        scale: 1;
+        opacity: 1;
+    }
+    25%,
+    100% {
+        opacity: 0;
+        scale: 0.8;
+    }
+}
+
+.triangle_hide {
+    animation-duration: 2.5s;
+    animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+    0%,
+    25% {
+        opacity: 0;
+        scale: 0.8;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+.triangle_show {
+    animation-duration: 2.5s;
+    animation-name: fadeIn;
+}
+
+
+#text {
+    position: absolute;
+    font-family: system-ui;
+    user-select: none;
+    font-size: 1.1em;
 }
