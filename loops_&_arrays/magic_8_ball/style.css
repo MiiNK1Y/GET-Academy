@@ -16,7 +16,7 @@ body,
 }
 
 #eight_ball {
-    position: relative;
+    z-index: 0;
     border-radius: 50%;
     width: 400px;
     height: 400px;
@@ -27,7 +27,6 @@ body,
     box-shadow: 50px 50px 150px 10px white,
                 inset 12px 10px 30px 1px white;
     transition: box-shadow 0.5s;
-    cursor: pointer;
 }
 
 #eight_ball:hover {
@@ -125,4 +124,23 @@ body,
     font-family: system-ui;
     user-select: none;
     font-size: 1.1em;
+    text-align: center;
+}
+
+/* make an object un-clickable */
+.no_click {
+    user-select: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+#app-mask {
+    display: none;
+    position: absolute;
+    background-color: red;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
 }
