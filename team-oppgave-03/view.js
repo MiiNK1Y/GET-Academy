@@ -204,6 +204,35 @@ function winFunction() {
     <div class="blink">Gratulerer,<br>du vant spillet!!</div>
     <img src="plan/snoop-dogg-dancing.gif" alt="Snoop Dogg danser fordi du vant <3">
     <button onclick="location.reload()">Spill igjen</button>
+
+    <!-- MINI CAR LOOK SO CUTE, late night coding bs - Aleks -->
+    <div class="mini-car">
+        <div id="car__mini">
+            <div id="car__front__mini"></div>
+            <div id="car__middle">
+                <div class="door-container">
+                    <div id="front-left-door" class="door border door-left__mini"></div>
+                    <div id="front-right-door" class="door border door-left__mini"></div>
+                </div>
+                <div id="roof__mini">
+                    <div class="front-window"></div>
+                    <div class="front-side-windows"></div>
+                    <div class="back-side-windows"></div>
+                    <div class="back-window"></div>
+                    <div class="roof-frame"></div>
+                </div>
+                <div class="door-container">
+                    <div id="back-left-door" class="door border door-right__mini"></div>
+                    <div id="back-right-door" class="door border door-right__mini"></div>
+                </div>
+            </div>
+            <div id="car__back__mini"></div>
+            <div class="tyre-front-left tyre"></div>
+            <div class="tyre-front-right tyre"></div>
+            <div class="tyre-back-left tyre"></div>
+            <div class="tyre-back-right tyre"></div>
+        </div>
+    <div>
     `;
 }
 
