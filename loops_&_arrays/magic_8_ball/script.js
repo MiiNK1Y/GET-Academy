@@ -30,7 +30,11 @@ let curMessage;
 // view ---------------------------------------------------------------------------------
 updateView();
 function updateView() {
-    app.innerHTML = eightBallFace();
+    app.innerHTML = /*HTML*/ `
+        <div id="eight_ball" class="clickable" onclick="showMessageButton()">
+            ${eightBallFace()}
+        </div>
+    `;
 }
 
 function eightBallFace() {
@@ -41,26 +45,22 @@ function eightBallFace() {
 
         // the front of the ball, where no message is shown.
         face = /*HTML*/ `
-            <div id="eight_ball" class="clickable" onclick="showMessageButton()">
-                <div id="eight_ball__slider" class="eight_ball__slider_front">
-                    <div id="eight_ball__front"><strong>8</strong></div>
-                    <div id="eight_ball__back">
-                        <img src="triangle.png" id="triangle" class="triangle_hide" />
-                        <div id="text">${curMessage}</div>
-                    </div>
+            <div id="eight_ball__slider" class="eight_ball__slider_front">
+                <div id="eight_ball__front"><strong>8</strong></div>
+                <div id="eight_ball__back">
+                    <img src="triangle.png" id="triangle" class="triangle_hide" />
+                    <div id="text">${curMessage}</div>
                 </div>
             </div>
         `;
     } else if (state == "message") {
         // the message-side of the ball.
         face = /*HTML*/ `
-            <div id="eight_ball" class="clickable" onclick="showMessageButton()">
-                <div id="eight_ball__slider" class="eight_ball__slider_back">
-                    <div id="eight_ball__front"><strong>8</strong></div>
-                    <div id="eight_ball__back">
-                        <img src="triangle.png" id="triangle" />
-                        <div id="text">${curMessage}</div>
-                    </div>
+            <div id="eight_ball__slider" class="eight_ball__slider_back">
+                <div id="eight_ball__front"><strong>8</strong></div>
+                <div id="eight_ball__back">
+                    <img src="triangle.png" id="triangle" />
+                    <div id="text">${curMessage}</div>
                 </div>
             </div>
         `;
@@ -85,10 +85,7 @@ function showMessageButton() {
 function setMessage() {
     let m = messageList[Math.floor(Math.random() * messageList.length)]
     if (m != curMessage) {curMessage = m}
-    else {
-        console.log("the same, rerolling")
-        setMessage();
-    }
+    else setMessage();
 }
 
 // animation.

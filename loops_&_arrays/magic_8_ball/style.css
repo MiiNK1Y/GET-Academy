@@ -127,15 +127,6 @@ body,
     text-align: center;
 }
 
-/* make an object un-clickable */
-.no_click {
-    user-select: none;
-}
-
-.clickable {
-    cursor: pointer;
-}
-
 #app-mask {
     display: none;
     position: absolute;
