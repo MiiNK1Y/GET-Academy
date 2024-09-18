@@ -2,25 +2,34 @@
 const app = document.getElementById("app");
 
 let selectedLampIndex;
+let timer;
+let timedSec;
 
 // view -----------------------------------------
 updateView();
 function updateView() {
     app.innerHTML = /*HTML*/ `
-        <div id="lamp_grid"></div>
-    `
-    makeLamps();
+        ${timed()}
+        <div id="lamp_grid">${makeLamps()}</div>
+    `;
+
     randomOn();
 }
 
 function makeLamps() {
-    const lampGrid = document.getElementById("lamp_grid");
+    let html = "";
+    for (let num = 0; num < 25; num++) html += /*HTML*/ `<div id="lamp_${num}" class="lamp"></div>`;
+    return html;
+}
 
-    for (let num = 0; num < 25; num++) {
-        lampGrid.innerHTML += /*HTML*/ `
-            <div id="lamp_${num}" class="lamp"></div>
-        `;
-    }
+function timed() {
+    if (timedSec) return /*HTML*/ `
+        <div id="timer">Your time: 
+            <div id="time">${timedSec}</div>
+        </div>
+    `;
+
+    else return ""; // return nothing, to avoid "undefined" string.
 }
 
 // controller -----------------------------------
@@ -31,9 +40,15 @@ function randomOn() {
 
     lamp.classList.add("lamp_on");
     lamp.setAttribute("onclick", "setTime()");
+
+    // set timer when a bulb light up.
+    timer = new Date().getTime();
 }
 
 function setTime(){
-    // tmp
+    let newTime = new Date().getTime();
+    let timedMilli = Math.floor(newTime - timer);
+    timedSec = timedMilli / 1000;
+
     updateView();
 }
