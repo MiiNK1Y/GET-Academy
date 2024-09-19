@@ -1,4 +1,4 @@
-// view -----------------------------------------------
+// model -----------------------------------------------
 const app = document.getElementById("app");
 
 const vocals = [
