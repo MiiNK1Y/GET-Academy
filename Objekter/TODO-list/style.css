@@ -69,6 +69,7 @@ option {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    margin: 10px;
 }
 
 #taskbar > button {
@@ -84,6 +85,30 @@ option {
     background-color: var(--Lavender);
 }
 
-.task-list {
+.list {
     background-color: var(--Surface_0);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list__task-item {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.list__task-item-bg-1 {
+    background-color: var(--Base); 
+}
+
+.list__task-item-bg-2 {
+    background-color: var(--Mantle);
+}
+
+.list__task-name,
+.list__task-status {
+    display: inline;
+    font-size: 1.3em;
 }

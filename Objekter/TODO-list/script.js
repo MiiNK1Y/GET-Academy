@@ -1,18 +1,36 @@
 // model --------------------------------------------------
 const app = document.getElementById("app");
 
-// a demo list for first-visitors.
+// a demo lists
 let taskLists = [
                     {
-                        name: "demo list",
+                        name: "Demo list",
                         tasks: {
-                            "get money": true,
-                            "fuck bitches": false,
+                            "Get money.": true,
+                            "Fuck bitches.": false,
+                            "Crank hog.": true,
+                            "Nea-nea.": false,
+                            "Na-nea.": false,
+                            "Nea-ea.": false,
+                            "Cank hog.": true,
+                            "Cak hog.": true,
+                        }
+                    },
+                    {
+                        name: "Demo list 2",
+                        tasks: {
+                            "Crank that soljia boi.": true,
+                            "Watch me whip, whip.": false,
                         }
                     },
                 ];
 
 let curTaskList = taskLists[0];
+
+// states
+let showList = true;
+let addTask = false;
+let addList = false;
 
 
 // view ---------------------------------------------------
@@ -20,19 +38,23 @@ updateView();
 function updateView() {
     app.innerHTML = /*HTML*/ `
         ${taskbar()}
-        ${list()}
+        ${card()}
     `;
 }
 
 function taskbar() {
+    let lists = function() {
+        let li = "";
+        for (let [key, value] of Object.entries(taskLists)){
+            li += /*HTML*/ `<option value="${value.name}">${value.name}</option>`;
+        }
+
+        return li;
+    }
+
     let html = /*HTML*/ `
         <div id="taskbar">
-            <select name="lists" id="task-lists">
-                <option value="test">test</option>
-                <option value="test1">test1</option>
-                <option value="test2">test2</option>
-                <option value="test3">test3</option>
-            </select>
+            <select name="lists" id="task-lists">${lists()}</select>
             <button onclick="makeTask()">New task</button>
             <button onclick="makeList()">New task-list</button>
             <button onclick="removeAll()">Remove all</button>
@@ -43,19 +65,57 @@ function taskbar() {
     return html;
 }
 
-function list() {
-    // returns the list itself, containing the tasks and checkboxes.
-    return ""; // tmp
+function card() {
+    if (showList) return listView();
+    else if (addTask) return addTaskView();
+    else if (addList) return addListView();
+}
+
+function listView() {
+    let coloring = true;
+
+    let html = /*HTML*/ `<div class="list">`;
+    for (let [key, value] of Object.entries(curTaskList.tasks)){
+
+        coloring = coloring ? false : true;
+        let backgroundColor = coloring ? "list__task-item-bg-1" : "list__task-item-bg-2";
+
+        let checkbox;
+        if (value) checkbox = "checked"
+        else checkbox = null;
+
+        html += /*HTML*/ `
+            <div class="list__task-item ${backgroundColor}">
+                <input class="list__task-status" type="checkbox" ${checkbox} />
+                <div class="list__task-name">${key}</div>
+            </div>
+        `;
+    }
+    html += /*HTML*/ `</div>`;
+
+    return html;
+}
+
+function addTaskView() {
+    //
+}
+
+function addListView() {
+    //
 }
 
 
 // controller ---------------------------------------------
-function makeList() {
-    // adds a new list to the 'taskLists'.
+function curListController() {
+    // control what list are currently showing.
 }
 
 function makeTask() {
     // adds a new task to the current list.
+}
+
+function makeList() {
+    // adds a new list to the 'taskLists'.
 }
 
 function removeAll() {
