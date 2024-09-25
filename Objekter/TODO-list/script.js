@@ -28,9 +28,9 @@ let taskLists = [
 let curTaskList = taskLists[0];
 
 // states
-let showList = true;
-let addTask = false;
-let addList = false;
+let showingList = true;
+let addingTask = false;
+let addingList = false;
 
 
 // view ---------------------------------------------------
@@ -66,9 +66,9 @@ function taskbar() {
 }
 
 function card() {
-    if (showList) return listView();
-    else if (addTask) return addTaskView();
-    else if (addList) return addListView();
+    if (showingList) return listView();
+    else if (addingTask) return addTaskView();
+    else if (addingList) return addListView();
 }
 
 function listView() {
