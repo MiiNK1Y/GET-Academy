@@ -21,7 +21,8 @@ const messageList = [
                 "Suicide?",
                 "Suck my<br>dick.",
                 "Fuck<br>yourself.",
-                "Pee, is stored<br>in<br>the balls."
+                "Pee, is stored<br>in<br>the balls.",
+                "Tom Crook should<br>not<br>have missed that."
                 ];
 
 let curMessage;
