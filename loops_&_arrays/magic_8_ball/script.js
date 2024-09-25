@@ -22,7 +22,7 @@ const messageList = [
                 "Suck my<br>dick.",
                 "Fuck<br>yourself.",
                 "Pee, is stored<br>in<br>the balls.",
-                "Tom Crook should<br>not<br>have missed that."
+                "Tom Crook<br>should not<br>have missed<br>that."
                 ];
 
 let curMessage;
