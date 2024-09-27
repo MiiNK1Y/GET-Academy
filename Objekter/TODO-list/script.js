@@ -1,36 +1,35 @@
 // model --------------------------------------------------
 const app = document.getElementById("app");
 
-// a demo lists
+// demo lists
 let taskLists = [
-                    {
-                        name: "Demo list",
-                        tasks: {
-                            "Get money.": true,
-                            "Fuck bitches.": false,
-                            "Crank hog.": true,
-                            "Nea-nea.": false,
-                            "Na-nea.": false,
-                            "Nea-ea.": false,
-                            "Cank hog.": true,
-                            "Cak hog.": true,
-                        }
-                    },
-                    {
-                        name: "Demo list 2",
-                        tasks: {
-                            "Crank that soljia boi.": true,
-                            "Watch me whip, whip.": false,
-                        }
-                    },
-                ];
+    {
+        name: "Demo list",
+        tasks: {
+            "Get money.": true,
+            "Fuck bitches.": false,
+            "Crank hog.": true,
+        }
+    },
+    {
+        name: "Demo list 2",
+        tasks: {
+            "Crank that soljia boi.": true,
+            "Watch me whip, whip.": false,
+        }
+    },
+];
 
-let curTaskList = taskLists[0];
-
-// states
-let showingList = true;
-let addingTask = false;
-let addingList = false;
+let model = {
+    list: {
+        current: lists[0],
+        showing: true,
+        adding: false,
+    },
+    task: {
+        adding: false,
+    },
+};
 
 
 // view ---------------------------------------------------
