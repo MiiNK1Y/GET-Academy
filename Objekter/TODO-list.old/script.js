@@ -22,12 +22,20 @@ let taskLists = [
 
 let model = {
     list: {
-        current: lists[0],
-        showing: true,
+        current: taskLists[0],
+        showing: false,
         adding: false,
+        add: {
+            name: null, // name of the new list.
+        },
     },
+
     task: {
-        adding: false,
+        adding: true,
+        add: {
+            task: null, // what to do.
+            completeBefore: null, // time.
+        },
     },
 };
 
@@ -36,12 +44,12 @@ let model = {
 updateView();
 function updateView() {
     app.innerHTML = /*HTML*/ `
-        ${taskbar()}
-        ${card()}
+        ${taskbarView()}
+        ${cardView()}
     `;
 }
 
-function taskbar() {
+function taskbarView() {
     let lists = function() {
         let li = "";
         for (let [key, value] of Object.entries(taskLists)){
@@ -64,17 +72,17 @@ function taskbar() {
     return html;
 }
 
-function card() {
-    if (showingList) return listView();
-    else if (addingTask) return addTaskView();
-    else if (addingList) return addListView();
+function cardView() {
+    if (model.list.showing) return listView();
+    else if (model.task.adding) return addTaskView();
+    else if (model.list.adding) return addListView();
 }
 
-function listView() {
+function getList() {
     let coloring = true;
 
-    let html = /*HTML*/ `<div class="list">`;
-    for (let [key, value] of Object.entries(curTaskList.tasks)){
+    let html = ``;
+    for (let [key, value] of Object.entries(model.list.current.tasks)){
 
         coloring = coloring ? false : true;
         let backgroundColor = coloring ? "list__task-item-bg-1" : "list__task-item-bg-2";
@@ -90,13 +98,48 @@ function listView() {
             </div>
         `;
     }
-    html += /*HTML*/ `</div>`;
 
     return html;
 }
 
+function listView() {
+    let html = /*HTML*/ `<div class="list">${getList()}</div>`;
+    return html;
+}
+
 function addTaskView() {
-    //
+    let html = /*HTML*/ `
+        <div class="list">
+            <div class="list__add-task-item">
+                <div class="list__add-task-item__fields">
+                    <div class="list__add-task-item__fields-top">
+                        <div class="text">
+                            Task:&nbsp;
+                            <input id="task_text" class="text_input" type="text" />
+                        </div>
+                    </div>
+                    <div class="list__add-task-item__fields-bottom">
+                        <div class="date">
+                            Date:&nbsp;
+                            <input id="do_date" class="date_input" type="date"/>
+                        </div>
+                        <div class="complete_by">
+                            Complete by:&nbsp;
+                            <input id="complete_date" class="date_input" type="date"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="list__add-task-item__button">
+                    <button onclick="makeTask()">ADD</button>
+                </div>
+            </div>
+
+            ${getList()}
+
+        </div>
+    `;
+
+    return html;
 }
 
 function addListView() {
@@ -110,7 +153,17 @@ function curListController() {
 }
 
 function makeTask() {
-    // adds a new task to the current list.
+    let text = document.getElementById("task_text").value;
+    let doDate = document.getElementById("do_date").value;
+    let completeDate = document.getElementById("complete_date").value;
+
+    let ifDoDate = doDate ? doDate : "N";
+    let ifCompleteDate = completeDate ? completeDate : "A";
+
+    let task = `${text} (${ifDoDate} / ${ifCompleteDate})`;
+
+    model.list.current.tasks[task] = false;
+    updateView();
 }
 
 function makeList() {

@@ -112,3 +112,72 @@ option {
     display: inline;
     font-size: 1.3em;
 }
+
+.list__add-task-item {
+    background-color: var(--Crust);
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+}
+
+.list__add-task-item__fields-top {
+    background-color: #6c7086;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.list__add-task-item__fields-bottom {
+    background-color: #45475a;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    text-wrap: nowrap;
+}
+
+.list__add-task-item__fields-top > .text {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.list__add-task-item__fields-top > .text > .text_input {
+    background-color: var(--Overlay_2);
+    color: black;
+    border-radius: 4px;
+    border: transparent;
+    width: 100%;
+    padding: 5px;
+}
+
+.list__add-task-item__fields-top > .text > .text_input:focus {
+    outline: 2px solid var(--Green);
+}
+
+.list__add-task-item__fields-bottom > .date {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.list__add-task-item__fields-bottom > .complete_by {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.list__add-task-item__fields-bottom .date_input {
+    background-color: var(--Mantle);
+    padding: 3px;
+    border-radius: 5px;
+    color: var(--Text);
+    border: transparent;
+}
+
+.list__add-task-item__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
