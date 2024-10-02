@@ -40,7 +40,8 @@ function taskbarView() {
 
 function cardView() {
     let html = /*HTML*/ `<div class="card">`;
-    if (model.app.view.list) html += `${listView()}</div>`;
+    if (model.app.view.list && model.app.view.newTask) html += `${addTaskView()} ${listView()}</div>`;
+    else if (model.app.view.list) html += `${listView()}</div>`;
 
     return html;
 
@@ -51,13 +52,16 @@ function cardView() {
 function listView() {
     const cur = model.data.tasklist.current;
     const list = Object.entries(model.data.tasklist.lists[cur]);
-
+    let coloring = true;
     let html = "";
 
     for (const [key, value] of list) {
+        coloring = coloring ? false : true;
+        let backgroundColor = coloring ? "task-item_bg" : "task-item_bg-1";
         const c = value.complete ? "checked" : "";
+
         html += /*HTML*/ `
-            <div class="task-item">
+            <div class="task-item ${backgroundColor}">
                 <input type="checkbox" ${c} onchange="checkItem(${value.id})" />
                 <div class="text">${value.task}</div>
                 <div class="do-date">${value.doDate}</div>
@@ -67,4 +71,27 @@ function listView() {
     }
 
     return html;
+}
+
+
+function addTaskView() {
+    const html = /*HTML*/ `
+        <div class="add-task">
+            <div class="wrapper">
+                <div class="text">Task:&nbsp;<input id="task-text" type="text" /></div>
+                <div>
+                    <div class="date">Date:&nbsp;<input id="do-date" type="date" /></div>
+                    <div class="date">Complete by:&nbsp;<input id="complete-by-date" type="date" /></div>
+                </div>
+            </div>
+            <button onclick="addTask()">ADD</button>
+        </div>
+    `;
+
+    return html;
+}
+
+
+function addListView() {
+    //
 }

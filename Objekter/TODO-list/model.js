@@ -4,7 +4,7 @@ let model = {
         views: ["list", "new task", "new list", "edit task", "edit list"],
         view: {
             list: true,
-            newTask: false,
+            newTask: true,
             newList: false,
             editTask: false,
             editList: false,
@@ -29,6 +29,7 @@ let model = {
         tasklist: {
             current: "demo list",
             adding: false,
+            awaitingId: 10,
             lists: {
                 "demo list": [
                     {
