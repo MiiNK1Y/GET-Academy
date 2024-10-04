@@ -28,7 +28,6 @@ let model = {
     data: {
         tasklist: {
             current: "demo list",
-            adding: false,
             awaitingId: 10,
             lists: {
                 "demo list": [
@@ -78,6 +77,7 @@ let model = {
                         completeByDate: "19.11.2024",
                     },
                 ],
+
                 "third demo list": [
                     {
                         id: 7,

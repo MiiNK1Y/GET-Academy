@@ -44,19 +44,41 @@ body {
     background-color: var(--Base);
 }
 
+button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/*-----------------TASKBAR---------------------*/
+
 #taskbar > button,
 #taskbar > #task-lists {
+    background-color: var(--Mauve);
+    border: none;
+    border-radius: 5px;
     font-family: system-ui;
     font-size: 1.2em;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 /*---------------CONTENT-CARD-------------------*/
 
 .card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     background-color: var(--Surface_0);
+    border-radius: 8px;
+    padding: 10px;
 }
 
 /*---------------TASK-ITEM LIST-----------------*/
+
+.task-item {
+    padding: 4px;
+    border-radius: 6px;
+}
 
 .text,
 .do-date,
@@ -66,32 +88,63 @@ body {
 
 .do-date,
 .complete-by-date {
+    background-color: var(--Overlay_0);
     float: right;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 2px;
 }
 
 .task-item_bg {
-    background-color: var(--Surface_0);
+    background-color: var(--Base);
 }
 
 .task-item_bg-1 {
-    background-color: var(--Surface_1);
+    background-color: var(--Mantle);
 }
 
 /*----------------ADD-TASK BOX-----------------*/
 
 .add-task {
     display: flex;
-    border-bottom: 10px solid var(--Base);
-    border-top: 10px solid var(--Base)
+    background-color: var(--Mantle);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.add-task > button,
+.add-task
+.text,
+.dates {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.add-task .text, .date {
+    display: flex;
+    align-items: center;
 }
 
 .add-task .text {
     display: flex;
-    background-color: var(--Surface_1);
+    background-color: var(--Surface_2);
 }
 
 .add-task .dates {
-    background-color: var(--Surface_0);
+    display: flex;
+    background-color: var(--Surface_1);
+    margin-top: 5px;
+}
+
+.add-task input {
+    border-radius: 5px;
+    border: 2px solid transparent;
+    padding: 2px 2px 0 2px;
+}
+
+.add-task input:focus {
+    outline: 2px solid var(--Green);
 }
 
 .wrapper,
@@ -99,12 +152,25 @@ body {
     width: 100%;
 }
 
-.date {
-    display: inline;
+.text > input {
+    background-color: var(--Overlay_2);
+}
+
+.dates input {
+    font-size: 0.8em;
+    background-color: var(--Crust);
+    color: var(--Text);
+    margin-right: 10px;
 }
 
 .date:last-child {
     float: right;
+}
+
+.add-task > button {
+    margin-left: 5px;
+    background-color: var(--Mauve);
+    border: none;
 }
 
 /*----------------------------------------------*/

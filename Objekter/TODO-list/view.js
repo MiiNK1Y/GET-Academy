@@ -96,7 +96,7 @@ function addTaskView() {
         <div class="add-task">
             <div class="wrapper">
                 <div class="text">Task:&nbsp;<input id="task-text" type="text" /></div>
-                <div>
+                <div class="dates">
                     <div class="date">Date:&nbsp;<input id="do-date" type="date" value="${todayDate()}" /></div>
                     <div class="date">Complete by:&nbsp;<input id="complete-by-date" type="date" value="${todayDate()}" /></div>
                 </div>

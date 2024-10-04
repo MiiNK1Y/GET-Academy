@@ -50,7 +50,9 @@ function addTask(){
     };
 
     const cur = model.data.tasklist.current;
-    model.data.tasklist.lists[cur].push(taskData);
+
+    // able to add to beginning of list (unshift) or end of list (push()).
+    model.data.tasklist.lists[cur].unshift(taskData);
 
     updateView();
 }
