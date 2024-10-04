@@ -4,7 +4,7 @@ let model = {
         views: ["list", "new task", "new list", "edit task", "edit list"],
         view: {
             list: true,
-            newTask: true,
+            newTask: false,
             newList: false,
             editTask: false,
             editList: false,
