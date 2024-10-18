@@ -23,6 +23,12 @@ function showAddTaskView() {
 }
 
 
+function showAddListView() {
+    model.app.view.newList = true;
+    updateView();
+}
+
+
 function addTask(){
     const genID = function() {
         const id = model.data.tasklist.awaitingId;
@@ -37,7 +43,7 @@ function addTask(){
         for (let val of sDate) {
             nDate = val + "." + nDate;
         }
-        nDate = nDate.slice(0, -1);
+        nDate = nDate.slice(0, -1); // remove the last dot in the string.
         return nDate;
     };
 
@@ -54,6 +60,13 @@ function addTask(){
     // able to add to beginning of list (unshift) or end of list (push()).
     model.data.tasklist.lists[cur].unshift(taskData);
 
+    updateView();
+}
+
+
+function cancelAddTask() {
+    model.app.view.newTask = false;
+    console.log(model.app.view.newTask);
     updateView();
 }
 

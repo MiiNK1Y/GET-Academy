@@ -6,8 +6,10 @@ let model = {
             list: true,
             newTask: false,
             newList: false,
-            editTask: false,
-            editList: false,
+            editing: {
+                editTask: false,
+                editList: false,
+            },
         },
     },
 

@@ -2,7 +2,9 @@ updateView();
 function updateView() {
     model.app.html.innerHTML = /*HTML*/ `
         ${taskbarView()}
-        ${cardView()}
+        <div class="card">
+            ${cardView()}
+        </div>
     `;
 }
 
@@ -39,16 +41,25 @@ function taskbarView() {
 
 
 function cardView() {
-    let html = /*HTML*/ `<div class="card">`;
-    if (model.app.view.list && model.app.view.newTask) html += `${addTaskView()} ${listView()}</div>`;
-    else if (model.app.view.list) html += `${listView()}</div>`;
+    let html = "";
+
+    // is this "legal" JS logic??
+    const items = model.app.view;
+    const itemMetaLinks = {
+        list: [items.list, listView()],
+        newTask: [items.newTask, addTaskView()],
+        newList: [items.newList, addListView()],
+    };
+
+    for (const [key, value] of Object.entries(itemMetaLinks)) {
+        if (value[0]) html = (value[1]) + html;
+    }
 
     return html;
-
-    // add more views here when they are completed.
 }
 
 
+// TODO add some small headers for the dates, so their purpose is known at a glance.
 function listView() {
     const cur = model.data.tasklist.current;
     const list = Object.entries(model.data.tasklist.lists[cur]);
@@ -78,15 +89,11 @@ function listView() {
 function addTaskView() {
     const todayDate = function() {
         const td = new Date();
-
         const fd = String(td.getDate());
         const d = (fd.length == 2) ? fd : ("0" + fd);
-
         const fm = String(td.getMonth() + 1);
         const m = (fm.length == 2) ? fm : ("0" + fm);
-
         const y = td.getFullYear();
-
         const today = y + "-" + m + "-" + d; // HTML5 compliance.
 
         return today;
@@ -101,7 +108,10 @@ function addTaskView() {
                     <div class="date">Complete by:&nbsp;<input id="complete-by-date" type="date" value="${todayDate()}" /></div>
                 </div>
             </div>
-            <button onclick="addTask()">ADD</button>
+            <div class="add-task-button_container">
+                <button onclick="addTask()">ADD</button>
+                <button onclick="cancelAddTask()">&#10005;</button>
+            </div>
         </div>
     `;
 
@@ -110,5 +120,12 @@ function addTaskView() {
 
 
 function addListView() {
-    //
+    const html = /*HTML*/`
+        <div class="add-list">
+            <span>Name your list:&nbsp;</span>
+            <input type="text" />
+        </div>
+    `;
+
+    return html;
 }
