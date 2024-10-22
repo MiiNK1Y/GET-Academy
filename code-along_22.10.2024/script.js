@@ -121,7 +121,7 @@ function payBillHtml() {
                 type="number"
                 placeholder="from account id"
                 oninput="model.input.bill.fromId=this.value"
-                value="${model.input.transfer.fromId ?? ''}"
+                value="${model.input.bill.fromId ?? ''}"
             />
             <input
                 type="number"
@@ -179,15 +179,10 @@ function transfer() {
     const to = Number(model.input.transfer.recipientId);
     const amount = Number(model.input.transfer.amount);
 
-    const err = "Need transfer information!";
-    try {
-        if (from === 0 || to === 0 || amount === 0) {
-            throw new RangeError(err);
-        }
-    } catch (RangeError) {
-        alert(err);
+    if (from === 0 || to === 0 || amount === 0) {
+        alert("Need transfer information!");
         return;
-    }
+    };
 
     const account = model.data.accounts;
     const indexOfFrom = account.findIndex(x => x.id === from);
@@ -195,7 +190,7 @@ function transfer() {
 
     // check if the account exists and if the balance exists.
     try {
-        if (amount > Number(model.data.accounts[indexOfFrom].amount)) {
+        if (amount > Number(account[indexOfFrom].amount)) {
             alert("Your are trying to transfer more than the account holds!");
         } else {
             account[indexOfFrom].amount -= amount;
@@ -206,6 +201,7 @@ function transfer() {
         return;
     }
 
+    resetFields();
     updateView();
 };
 
@@ -216,21 +212,17 @@ function payBill() {
     const recipient = Number(model.input.bill.recipient);   // some bs input, goes nowhere...
     const kid = Number(model.input.bill.kid);               // some bs input, goes nowhere...
 
-    const err = "Need payment information!";
-    try {
-        if (fromId === 0 || amount === 0 || recipient === 0 || kid === 0) {
-            throw new RangeError(err);
-        }
-    } catch (RangeError) {
-        alert(err);
+    if (fromId === 0 || amount === 0 || recipient === 0 || kid === 0) {
+        alert("Need payment information!");
         return;
-    }
+    };
 
     const account = model.data.accounts;
     const indexOfFrom = account.findIndex(x => x.id === fromId);
 
+    // check if the account exists and if the balance exists.
     try {
-        if (amount > account[indexOfFrom].amount) {
+        if (amount > Number(account[indexOfFrom].amount)) {
             alert("Your are trying to pay more than the account holds!");
         } else {
             account[indexOfFrom].amount -= amount;
@@ -240,7 +232,21 @@ function payBill() {
         return;
     }
 
+    resetFields();
     updateView();
+}
+
+
+function resetFields() {
+    model.input.transfer.fromId = null;
+    model.input.transfer.amount = null;
+    model.input.transfer.recipientId = null;
+
+
+    model.input.bill.fromId = null;
+    model.input.bill.amount = null;
+    model.input.bill.recipient = null;
+    model.input.bill.kid = null;
 }
 
 
@@ -258,7 +264,6 @@ function addAccount() {
 function removeAccount() {
     const accounts = model.data.accounts;
     const idToDelete = Number(model.input.deleteAccountId);
-
     const indexOfId = accounts.findIndex(x => x.id === idToDelete);
 
     if (indexOfId === -1) {
