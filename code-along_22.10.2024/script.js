@@ -189,16 +189,26 @@ function transfer() {
     const indexOfTo = account.findIndex(x => x.id === to);
 
     // check if the account exists and if the balance exists.
-    try {
-        if (amount > Number(account[indexOfFrom].amount)) {
-            alert("Your are trying to transfer more than the account holds!");
-        } else {
-            account[indexOfFrom].amount -= amount;
-            account[indexOfTo].amount += amount;
-        };
-    } catch (TypeError) {
+
+    //try {
+    //    if (amount > Number(account[indexOfFrom].amount)) {
+    //        alert("Your are trying to transfer more than the account holds!");
+    //    } else {
+    //        account[indexOfFrom].amount -= amount;
+    //        account[indexOfTo].amount += amount;
+    //    };
+    //} catch (TypeError) {
+    //    alert("One of the accounts given does not exist!")
+    //    return;
+    //}
+
+    if (indexOfFrom == -1 || indexOfTo == -1) {
         alert("One of the accounts given does not exist!")
-        return;
+    } else if (amount > Number(account[indexOfFrom].amount)) {
+        alert("Your are trying to transfer more than the account holds!");
+    } else {
+        account[indexOfFrom].amount -= amount;
+        account[indexOfTo].amount += amount;
     }
 
     resetFields();
@@ -221,15 +231,13 @@ function payBill() {
     const indexOfFrom = account.findIndex(x => x.id === fromId);
 
     // check if the account exists and if the balance exists.
-    try {
-        if (amount > Number(account[indexOfFrom].amount)) {
-            alert("Your are trying to pay more than the account holds!");
-        } else {
-            account[indexOfFrom].amount -= amount;
-        };
-    } catch (TypeError) {
-        alert("One of the accounts given does not exist!")
-        return;
+
+    if (indexOfFrom == -1) {
+        alert("The account given does not exist!")
+    } else if (amount > Number(account[indexOfFrom].amount)) {
+        alert("Your are trying to pay more than the account holds!");
+    } else {
+        account[indexOfFrom].amount -= amount;
     }
 
     resetFields();
