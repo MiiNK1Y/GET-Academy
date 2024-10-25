@@ -16,7 +16,7 @@ let model = {
     input: {
         add: {
             task: {
-                task: null,
+                task: "",
                 doDate: null,
                 completeByDate: null,
             },

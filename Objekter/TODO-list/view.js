@@ -16,7 +16,7 @@ function taskbarView() {
 
         let li = "";
 
-        for (const [key] of lists){
+        for (const [key] of lists) {
             const s = (key == selectedList) ? "selected" : "";
             li += /*HTML*/ `<option value="${key}" ${s}>${key}</option>`;
         }
@@ -51,7 +51,7 @@ function cardView() {
         newList: [items.newList, addListView()],
     };
 
-    for (const [key, value] of Object.entries(itemMetaLinks)) {
+    for (const value of Object.values(itemMetaLinks)) {
         if (value[0]) html = (value[1]) + html;
     }
 
@@ -62,12 +62,13 @@ function cardView() {
 // TODO add some small headers for the dates, so their purpose is known at a glance.
 function listView() {
     const cur = model.data.tasklist.current;
-    const list = Object.entries(model.data.tasklist.lists[cur]);
+    const list = Object.values(model.data.tasklist.lists[cur]);
+
     let colorSw = true; // 'color-switch'
     let bgColor, check;
     let html = "";
 
-    for (const [key, value] of list) {
+    for (const value of list) {
         colorSw = colorSw ? false : true; // color-switch
         bgColor = colorSw ? "task-item_bg" : "task-item_bg-1";
         check = value.complete ? "checked" : "";
@@ -87,25 +88,35 @@ function listView() {
 
 
 function addTaskView() {
-    const todayDate = function() {
-        const td = new Date();
-        const fd = String(td.getDate());
-        const d = (fd.length == 2) ? fd : ("0" + fd);
-        const fm = String(td.getMonth() + 1);
-        const m = (fm.length == 2) ? fm : ("0" + fm);
-        const y = td.getFullYear();
-        const today = y + "-" + m + "-" + d; // HTML5 compliance.
-
-        return today;
-    }
-
+    const task = model.input.add.task;
     const html = /*HTML*/ `
         <div class="add-task">
             <div class="wrapper">
-                <div class="text">Task:&nbsp;<input id="task-text" type="text" /></div>
+                <div class="text">Task:&nbsp;
+                    <input
+                        id="task-text"
+                        type="text"
+                        oninput="task.task=this.value"
+                        value="${task.task}"
+                    />
+                </div>
                 <div class="dates">
-                    <div class="date">Date:&nbsp;<input id="do-date" type="date" value="${todayDate()}" /></div>
-                    <div class="date">Complete by:&nbsp;<input id="complete-by-date" type="date" value="${todayDate()}" /></div>
+                    <div class="date">Date:&nbsp;
+                        <input
+                            id="do-date"
+                            type="date"
+                            oninput="task.doDate=this.value"
+                            value="${task.doDate}"
+                        />
+                    </div>
+                    <div class="date">Complete by:&nbsp;
+                        <input
+                            id="complete-by-date"
+                            type="date"
+                            oninput="task.completeByDate=this.value"
+                            value="${task.completeByDate}"
+                        />
+                    </div>
                 </div>
             </div>
             <div class="add-task-button_container">
