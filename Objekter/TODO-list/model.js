@@ -22,7 +22,7 @@ let model = {
             },
 
             tasklist: {
-                name: null,
+                name: "",
             },
         },
     },

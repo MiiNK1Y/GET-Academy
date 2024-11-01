@@ -31,8 +31,6 @@ function taskbarView() {
             </select>
             <button onclick="showAddTaskView()">New task</button>
             <button onclick="showAddListView()">New task-list</button>
-            <button onclick="removeAll()">Remove all</button>
-            <button onclick="exportList()">Export</button>
         </div>
     `;
 
@@ -59,14 +57,18 @@ function cardView() {
 }
 
 
-// TODO add some small headers for the dates, so their purpose is known at a glance.
 function listView() {
     const cur = model.data.tasklist.current;
     const list = Object.values(model.data.tasklist.lists[cur]);
 
     let colorSw = true; // 'color-switch'
     let bgColor, check;
-    let html = "";
+    let html = /*HTML*/`
+        <div class="list_header">
+            <div class="do-by">do by</div>
+            <div class="complete-by">complete by</div>
+        </div>
+    `;
 
     for (const value of list) {
         colorSw = colorSw ? false : true; // color-switch
@@ -96,8 +98,8 @@ function addTaskView() {
                     <input
                         id="task-text"
                         type="text"
-                        oninput="task.task=this.value"
-                        value="${task.task}"
+                        oninput="model.input.add.task.task=this.value"
+                        value="${model.input.add.task.task = this.value ?? ''}"
                     />
                 </div>
                 <div class="dates">
@@ -134,7 +136,13 @@ function addListView() {
     const html = /*HTML*/`
         <div class="add-list">
             <span>Name your list:&nbsp;</span>
-            <input type="text" />
+            <input
+                type="text"
+                oninput="model.input.add.tasklist.name=this.value"
+                value="${model.input.add.tasklist.name = this.value ?? ''}"
+            />
+            <button onclick="addList()">ADD</button>
+            <button onclick="cancelAddList()">&#10005;</button>
         </div>
     `;
 

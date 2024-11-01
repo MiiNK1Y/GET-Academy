@@ -44,17 +44,27 @@ body {
     background-color: var(--Base);
 }
 
+select:hover,
 button:hover {
     opacity: 0.5;
     cursor: pointer;
 }
 
 #app {
+    width: 600px;
     scale: 1.4;
     /* making things a bit bigger */
 }
 
 /*-----------------TASKBAR---------------------*/
+#taskbar {
+    text-align: center;
+}
+
+#task-lists:focus {
+    border: none;
+    outline: none;
+}
 
 #taskbar>button,
 #taskbar>#task-lists {
@@ -62,7 +72,7 @@ button:hover {
     border: none;
     border-radius: 5px;
     font-family: system-ui;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 5px;
     margin-bottom: 10px;
 }
@@ -79,6 +89,22 @@ button:hover {
 }
 
 /*---------------TASK-ITEM LIST-----------------*/
+
+.list_header {
+    border-radius: 5px;
+    text-align: right;
+    font-size: 0.7em;
+}
+
+.list_header>.do-by,
+.complete-by {
+    display: inline;
+    padding: 5px;
+}
+
+.list_header>.do-by {
+    padding-right: 25px;
+}
 
 .task-item {
     padding: 4px;
@@ -121,6 +147,7 @@ button:hover {
 
 .add-list,
 .add-task button,
+.add-list button,
 .add-task .text,
 .dates {
     padding: 5px;
@@ -144,22 +171,26 @@ button:hover {
     margin-top: 5px;
 }
 
-.add-task input {
+.add-task input,
+.add-list input {
     border-radius: 5px;
     border: 2px solid transparent;
     padding: 2px 2px 0 2px;
 }
 
-.add-task input:focus {
+.add-task input:focus,
+.add-list input:focus {
     outline: 2px solid var(--Green);
 }
 
 .wrapper,
-.text>input {
+.text>input,
+.add-list>input {
     width: 100%;
 }
 
-.text>input {
+.text>input,
+.add-list>input {
     background-color: var(--Overlay_2);
 }
 
@@ -183,16 +214,29 @@ button:hover {
     gap: 5px;
 }
 
-.add-task button {
+.add-task button,
+.add-list button {
     background-color: var(--Mauve);
     border: none;
 }
 
-.add-task button:last-child {
+.add-task button:last-child,
+.add-list button:last-child {
     background-color: var(--Red);
 }
 
 /*--------------------ADD-LIST------------------*/
 
+.add-list {
+    align-items: center;
+}
+
+.add-list span {
+    text-wrap: nowrap;
+}
+
+.add-list button {
+    margin-left: 4px;
+}
 
 /*----------------------------------------------*/

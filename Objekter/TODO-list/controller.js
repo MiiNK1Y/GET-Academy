@@ -16,6 +16,12 @@ function cancelAddTask() {
 }
 
 
+function cancelAddList() {
+    model.app.view.newList = false;
+    updateView();
+}
+
+
 function showAddTaskView() {
     // set todays date in the date-input.
     let dates = model.input.add.task;
@@ -71,8 +77,10 @@ function addTask() {
         id: genID(),
         complete: false,
         task: model.input.add.task.task,
-        doDate: convertDate(document.getElementById("do-date").value),
-        completeByDate: convertDate(document.getElementById("complete-by-date").value),
+        //doDate: convertDate(document.getElementById("do-date").value),
+        //completeByDate: convertDate(document.getElementById("complete-by-date").value),
+        doDate: convertDate(model.input.add.task.doDate),
+        completeByDate: convertDate(model.input.add.task.completeByDate),
     };
 
     const cur = model.data.tasklist.current;
@@ -85,10 +93,15 @@ function addTask() {
 
 
 function addList() {
-    //
+    const name = model.input.add.tasklist.name;
+    model.data.tasklist.lists[name] = [];
+    updateView();
 }
 
 
+
+
+// add later.............
 function removeAll() {
     //
 }
