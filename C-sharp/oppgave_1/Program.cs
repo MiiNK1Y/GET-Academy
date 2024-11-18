@@ -2,6 +2,11 @@
 
 internal class Program
 {
+    static void none()
+    {
+        Console.WriteLine("Denne metoden returnerer ingenting");
+    }
+
     static void Main(string[] args)
     {
         // del av oppgave 1 i "sterk typing og verdityper"
@@ -34,11 +39,6 @@ internal class Program
         int num1 = 5;
         int num2 = 10;
         Console.WriteLine($"sum of {num1} and {num2} = {sumOf(num1, num2)}");
-
-        void none()
-        {
-            Console.WriteLine("Denne metoden returnerer ingenting");
-        }
 
         none();
     }

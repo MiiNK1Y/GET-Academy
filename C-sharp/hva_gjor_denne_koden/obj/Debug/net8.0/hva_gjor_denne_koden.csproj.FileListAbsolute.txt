@@ -1,0 +1,15 @@
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/bin/Debug/net8.0/hva_gjor_denne_koden
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/bin/Debug/net8.0/hva_gjor_denne_koden.deps.json
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/bin/Debug/net8.0/hva_gjor_denne_koden.runtimeconfig.json
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/bin/Debug/net8.0/hva_gjor_denne_koden.dll
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/bin/Debug/net8.0/hva_gjor_denne_koden.pdb
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.GeneratedMSBuildEditorConfig.editorconfig
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.AssemblyInfoInputs.cache
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.AssemblyInfo.cs
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.csproj.CoreCompileInputs.cache
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.sourcelink.json
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.dll
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/refint/hva_gjor_denne_koden.dll
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.pdb
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/hva_gjor_denne_koden.genruntimeconfig.cache
+/home/a13k5/Github/GET-Academy/C-sharp/hva_gjor_denne_koden/obj/Debug/net8.0/ref/hva_gjor_denne_koden.dll
