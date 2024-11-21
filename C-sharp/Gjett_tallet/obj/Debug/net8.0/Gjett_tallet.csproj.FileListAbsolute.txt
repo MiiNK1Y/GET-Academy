@@ -1,0 +1,15 @@
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/bin/Debug/net8.0/Gjett_tallet
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/bin/Debug/net8.0/Gjett_tallet.deps.json
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/bin/Debug/net8.0/Gjett_tallet.runtimeconfig.json
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/bin/Debug/net8.0/Gjett_tallet.dll
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/bin/Debug/net8.0/Gjett_tallet.pdb
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.GeneratedMSBuildEditorConfig.editorconfig
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.AssemblyInfoInputs.cache
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.AssemblyInfo.cs
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.csproj.CoreCompileInputs.cache
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.sourcelink.json
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.dll
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/refint/Gjett_tallet.dll
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.pdb
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/Gjett_tallet.genruntimeconfig.cache
+/home/a13k5/Github/GET-Academy/C-sharp/Gjett_tallet/obj/Debug/net8.0/ref/Gjett_tallet.dll

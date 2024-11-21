@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Krokodillespillet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d86f64729817276ac9a2491da8756e90f1561d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a77f75e2f978b259bd4f584d0f697a3589a0808")]
 [assembly: System.Reflection.AssemblyProductAttribute("Krokodillespillet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Krokodillespillet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

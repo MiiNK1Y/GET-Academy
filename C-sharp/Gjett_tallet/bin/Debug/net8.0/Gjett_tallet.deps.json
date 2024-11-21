@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Gjett_tallet/1.0.0": {
+        "runtime": {
+          "Gjett_tallet.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Gjett_tallet/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
