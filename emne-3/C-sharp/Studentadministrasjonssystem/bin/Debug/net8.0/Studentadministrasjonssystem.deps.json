@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Studentadministrasjonssystem/1.0.0": {
+        "runtime": {
+          "Studentadministrasjonssystem.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Studentadministrasjonssystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

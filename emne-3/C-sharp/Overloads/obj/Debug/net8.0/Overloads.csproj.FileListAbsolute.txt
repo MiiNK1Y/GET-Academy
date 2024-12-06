@@ -1,0 +1,15 @@
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/bin/Debug/net8.0/Overloads
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/bin/Debug/net8.0/Overloads.deps.json
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/bin/Debug/net8.0/Overloads.runtimeconfig.json
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/bin/Debug/net8.0/Overloads.dll
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/bin/Debug/net8.0/Overloads.pdb
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.GeneratedMSBuildEditorConfig.editorconfig
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.AssemblyInfoInputs.cache
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.AssemblyInfo.cs
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.csproj.CoreCompileInputs.cache
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.sourcelink.json
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.dll
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/refint/Overloads.dll
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.pdb
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/Overloads.genruntimeconfig.cache
+/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Overloads/obj/Debug/net8.0/ref/Overloads.dll
