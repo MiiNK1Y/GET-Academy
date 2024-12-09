@@ -7,6 +7,7 @@ internal class Horse
     public int _speed { get; private set; }
     public int _distanceRan;
 
+
     internal Horse(int speed, string name, string owner)
     {
         _speed = speed;
@@ -14,10 +15,12 @@ internal class Horse
         _owner = owner;
     }
 
+
     internal void FeedHorse()
     {
         Console.WriteLine($"{_name} has been fed");
     }
+
 
     internal void GroomHorse()
     {

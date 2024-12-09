@@ -5,11 +5,13 @@ internal class HorseRace
     public List<Horse> Horses = new List<Horse>();
     private int _distanceKm;
 
+
     internal HorseRace(int distanceKm)
     {
         _distanceKm = distanceKm;
         AddRandomHorses(5);
     }
+
 
     // Add a bunch of random horses to the race.
     internal void AddRandomHorses(int amount)
@@ -37,17 +39,21 @@ internal class HorseRace
         }
     }
 
+
     internal void AddToRace(Horse horse)
     {
         Horses.Add(horse);
     }
 
+
     internal Horse StartRace()
     {
         for (int km = 0; km < _distanceKm; km++)
         {
+            // this is buggy asf, fix
             var horse = Horses[km];
             horse._distanceRan += horse._speed * km;
+            Thread.Sleep(_distanceKm / 100);
         }
 
         Horse winner = Horses[0]; // hold this value until it is overwritten.
