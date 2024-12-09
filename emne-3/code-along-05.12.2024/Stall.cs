@@ -1,7 +1,6 @@
 namespace code_along_05._12._2024;
 
-
-class Stall
+internal static class Stall
 {
-    HesteLop Lop = new HesteLop(3000);
+    static public List<Horse> myHorses = new List<Horse>();
 }

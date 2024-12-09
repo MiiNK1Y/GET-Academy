@@ -1,30 +1,26 @@
 namespace code_along_05._12._2024;
 
-class Horse
+internal class Horse
 {
-    public int _speed { get; private set; }
     public string _name { get; private set; } = string.Empty;
     public string _owner { get; private set; } = string.Empty;
-    public int _distance_ran;
+    public int _speed { get; private set; }
+    public int _distanceRan;
 
-    public Horse(int speed, string name, string owner)
+    internal Horse(int speed, string name, string owner)
     {
         _speed = speed;
         _name = name;
         _owner = owner;
     }
 
-    public void MatHest()
+    internal void FeedHorse()
     {
         Console.WriteLine($"{_name} has been fed");
     }
 
-    public void StellHest()
+    internal void GroomHorse()
     {
         Console.WriteLine($"{_name} has been groomed (non sexually)");
-    }
-
-    public void LeggTilHestelop()
-    {
     }
 }
