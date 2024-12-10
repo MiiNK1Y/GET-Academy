@@ -3,18 +3,22 @@ namespace code_along_05._12._2024;
 internal class HorseRace
 {
     public List<Horse> Horses = new List<Horse>();
-    private int _distanceKm;
+    public int _distanceKm { get; private set; }
+    public Horse _winner { get; private set; }
+    public Horse _looser { get; private set; }
 
 
     internal HorseRace(int distanceKm)
     {
         _distanceKm = distanceKm;
+        _winner = new Horse(); // place holder
+        _looser = new Horse(100, "none", "none", 999999); // place holder
         AddRandomHorses(5);
     }
 
 
     // Add a bunch of random horses to the race.
-    internal void AddRandomHorses(int amount)
+    private void AddRandomHorses(int amount)
     {
         string[] names = new string[10]
         {
@@ -32,10 +36,15 @@ internal class HorseRace
 
         Random rand = new Random();
 
-        for (int i = 0; i < amount; i++)
+        while (Horses.Count < amount)
         {
-            Horse horse = new Horse(rand.Next(51), names[rand.Next(names.Length)], "random");
-            AddToRace(horse);
+            string name = names[rand.Next(names.Length)];
+            var match = Horses.FirstOrDefault(horse => horse._name.Contains(name));
+            if (match == null)
+            {
+                Horse horse = new Horse(rand.Next(51), name, "random");
+                AddToRace(horse);
+            }
         }
     }
 
@@ -46,26 +55,28 @@ internal class HorseRace
     }
 
 
-    internal Horse StartRace()
+    internal void StartRace()
     {
-        for (int km = 0; km < _distanceKm; km++)
+        for (int i = 0; i < _distanceKm; i++)
         {
-            // this is buggy asf, fix
-            var horse = Horses[km];
-            horse._distanceRan += horse._speed * km;
-            Thread.Sleep(_distanceKm / 100);
-        }
+            UI.MenuTitle(ASCII.RaceOngoing);
 
-        Horse winner = Horses[0]; // hold this value until it is overwritten.
-
-        foreach (Horse horse in Horses)
-        {
-            if (horse._distanceRan > winner._distanceRan)
+            foreach (Horse h in Horses)
             {
-                winner = horse;
+                if (h._distanceRan >= _distanceKm)
+                {
+                    _winner = h;
+                    return;
+                }
+                else
+                {
+                    _looser = h._distanceRan < _looser._distanceRan ? h : _looser;
+                    h._distanceRan += h._speed;
+                    Console.WriteLine($"{h._name} => {h._distanceRan} Km");
+                }
             }
-        }
 
-        return winner;
+            Thread.Sleep(100);
+        }
     }
 }

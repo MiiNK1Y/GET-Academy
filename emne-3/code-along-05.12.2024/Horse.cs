@@ -7,6 +7,17 @@ internal class Horse
     public int _speed { get; private set; }
     public int _distanceRan;
 
+    // default overload
+    internal Horse() { }
+
+    // overload for temp value-holding horses
+    internal Horse(int speed, string name, string owner, int distanceRan)
+    {
+        _speed = speed;
+        _name = name;
+        _owner = owner;
+        _distanceRan = distanceRan;
+    }
 
     internal Horse(int speed, string name, string owner)
     {
@@ -16,14 +27,14 @@ internal class Horse
     }
 
 
-    internal void FeedHorse()
-    {
-        Console.WriteLine($"{_name} has been fed");
-    }
+    //internal void FeedHorse()
+    //{
+    //    Console.WriteLine($"{_name} has been fed");
+    //}
 
 
-    internal void GroomHorse()
-    {
-        Console.WriteLine($"{_name} has been groomed (non sexually)");
-    }
+    //internal void GroomHorse()
+    //{
+    //    Console.WriteLine($"{_name} has been groomed (non sexually)");
+    //}
 }
