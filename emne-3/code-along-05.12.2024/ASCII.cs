@@ -21,10 +21,6 @@ internal static class ASCII
        Press [Q] to exit.      
 -------------------------------";
 
-    internal static string MenuOption1 { get; private set; } = @"      [1] See your horses      ";
-    internal static string MenuOption2 { get; private set; } = @"      [2] Make a horse         ";
-    internal static string MenuOption3 { get; private set; } = @"      [3] Start a race         ";
-
     internal static string YourHorses { get; private set; } = @"===--->>- YOUR HORSES -<<---===";
     internal static string HorseCreator { get; private set; } = @"===--->> HORSE CREATOR <<---===";
     internal static string RaceMaker { get; private set; } = @"///////// RACE MAKER \\\\\\\\\\";
