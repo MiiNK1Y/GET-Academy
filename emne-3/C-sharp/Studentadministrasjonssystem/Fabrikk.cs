@@ -4,22 +4,65 @@ internal static class Fabrikk
 {
     public static void Run()
     {
-        Student student1 = new Student("Miguel", "Liberal-arts", 33, 0);
-        Student student2 = new Student("Geir", "Landbruksmekanikk", 99, 1);
-        Console.WriteLine("\n------------STUDENTER------------");
-        student1.SkrivUtInfo();
-        student2.SkrivUtInfo();
+        List<Fag> alleFag = new List<Fag>
+        {
+            new Fag(
+                fagkode: 0,
+                fagnavn: "Liberal-arts",
+                antallStudiepoeng: 1),
 
-        Fag fag1 = new Fag(0, "Liberal-arts", 1);
-        Fag fag2 = new Fag(1, "Landbruksmekanikk", 99);
-        Console.WriteLine("\n---------------FAG---------------");
-        fag1.SkrivUtInfo();
-        fag2.SkrivUtInfo();
+            new Fag(
+                fagkode: 1,
+                fagnavn: "Landbruksmekanikk",
+                antallStudiepoeng: 99),
 
-        Karakter student1Karakter = new Karakter(student1, fag1, 6);
-        Karakter student2Karakter = new Karakter(student2, fag2, 6);
-        Console.WriteLine("\n------------KARAKTERER-----------");
-        student1Karakter.SkrivUtInfo();
-        student2Karakter.SkrivUtInfo();
+            new Fag(
+                fagkode: 2,
+                fagnavn: "IKT-Servicefag",
+                antallStudiepoeng: 99),
+
+            new Fag(
+                fagkode: 3,
+                fagnavn: "TiP",
+                antallStudiepoeng: 99)
+        };
+
+        Student student1 = new Student
+            (
+                navn: "Miguel",
+                alder: 33,
+                studentId: 0,
+                fag: [
+                    alleFag.Find(f => f._fagnavn == "Liberal-arts"),
+                    alleFag.Find(f => f._fagnavn == "TiP")
+                ]
+            );
+
+        Student student2 = new Student
+            (
+                navn: "Geir",
+                alder: 99,
+                studentId: 1,
+                fag: [
+                    alleFag.Find(f => f._fagnavn == "Landbruksmekanikk"),
+                    alleFag.Find(f => f._fagnavn == "IKT-Servicefag"),
+                ]
+            );
+
+        Karakter student1Karakter = new Karakter(
+                student1,
+                fagLiberalArts,
+                6);
+
+        Karakter student2Karakter = new Karakter(
+                student2,
+                fagLandbruksMekanikk,
+                6);
+
+        List<Karakter> karakterer = new List<Karakter>
+        {
+            student1Karakter,
+            student2Karakter
+        };
     }
 }

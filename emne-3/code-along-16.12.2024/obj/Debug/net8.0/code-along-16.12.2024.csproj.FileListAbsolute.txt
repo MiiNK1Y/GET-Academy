@@ -1,0 +1,15 @@
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/bin/Debug/net8.0/code-along-16.12.2024
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/bin/Debug/net8.0/code-along-16.12.2024.deps.json
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/bin/Debug/net8.0/code-along-16.12.2024.runtimeconfig.json
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/bin/Debug/net8.0/code-along-16.12.2024.dll
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/bin/Debug/net8.0/code-along-16.12.2024.pdb
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.GeneratedMSBuildEditorConfig.editorconfig
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.AssemblyInfoInputs.cache
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.AssemblyInfo.cs
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.csproj.CoreCompileInputs.cache
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.sourcelink.json
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.dll
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/refint/code-along-16.12.2024.dll
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.pdb
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/code-along-16.12.2024.genruntimeconfig.cache
+/home/a13k5/Github/GET-Academy/emne-3/code-along-16.12.2024/obj/Debug/net8.0/ref/code-along-16.12.2024.dll

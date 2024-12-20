@@ -16,7 +16,6 @@ internal class HorseRace
         AddRandomHorses(5);
     }
 
-
     // Add a bunch of random horses to the race.
     private void AddRandomHorses(int amount)
     {
