@@ -11,3 +11,5 @@ build_property.RootNamespace = Studentadministrasjonssystem
 build_property.ProjectDir = /home/a13k5/Github/GET-Academy/emne-3/C-sharp/Studentadministrasjonssystem/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
