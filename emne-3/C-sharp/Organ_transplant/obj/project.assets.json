@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/a13k5/Github/GET-Academy/emne-3/code-along-05.12.2024/code-along-05.12.2024.csproj",
-      "projectName": "code-along-05.12.2024",
-      "projectPath": "/home/a13k5/Github/GET-Academy/emne-3/code-along-05.12.2024/code-along-05.12.2024.csproj",
+      "projectUniqueName": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/Organ_transplant.csproj",
+      "projectName": "Organ_transplant",
+      "projectPath": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/Organ_transplant.csproj",
       "packagesPath": "/home/a13k5/.nuget/packages/",
-      "outputPath": "/home/a13k5/Github/GET-Academy/emne-3/code-along-05.12.2024/obj/",
+      "outputPath": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/a13k5/.nuget/NuGet/NuGet.Config"

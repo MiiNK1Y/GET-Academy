@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Studentadministrasjonssystem/Studentadministrasjonssystem.csproj": {}
+    "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/Organ_transplant.csproj": {}
   },
   "projects": {
-    "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Studentadministrasjonssystem/Studentadministrasjonssystem.csproj": {
+    "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/Organ_transplant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Studentadministrasjonssystem/Studentadministrasjonssystem.csproj",
-        "projectName": "Studentadministrasjonssystem",
-        "projectPath": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Studentadministrasjonssystem/Studentadministrasjonssystem.csproj",
+        "projectUniqueName": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/Organ_transplant.csproj",
+        "projectName": "Organ_transplant",
+        "projectPath": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/Organ_transplant.csproj",
         "packagesPath": "/home/a13k5/.nuget/packages/",
-        "outputPath": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Studentadministrasjonssystem/obj/",
+        "outputPath": "/home/a13k5/Github/GET-Academy/emne-3/C-sharp/Organ_transplant/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/a13k5/.nuget/NuGet/NuGet.Config"
