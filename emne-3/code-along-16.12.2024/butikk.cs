@@ -16,26 +16,11 @@ public class Butikk
             int alders_grense_for_alkohol_uten_id = 25;
             int alders_grense_for_alkohol_med_id = 18;
 
-            if (kunde_alder >= alders_grense_for_alkohol_uten_id)
-            {
-                return "kan kjope alkohol";
-            }
-            else if (kunde_alder >= alders_grense_for_alkohol_med_id)
-            {
-                return "kan kjope alkohol etter aa ha vist id";
-            }
-            else if (kunde_alder < alders_grense_for_alkohol_med_id)
-            {
-                return "kan IKKE kjope alkohol";
-            }
-            else
-            {
-                return "...";
-            }
+            if (kunde_alder >= alders_grense_for_alkohol_uten_id) { return "kan kjope alkohol"; }
+            else if (kunde_alder >= alders_grense_for_alkohol_med_id) { return "kan kjope alkohol etter aa ha vist id"; }
+            else if (kunde_alder < alders_grense_for_alkohol_med_id) { return "kan IKKE kjope alkohol"; }
+            else { return "..."; }
         }
-        else
-        {
-            return "Det er etter 20, kunden kan ikke kjope alkohol";
-        }
+        else { return "Det er etter 20, kunden kan ikke kjope alkohol"; }
     }
 }
